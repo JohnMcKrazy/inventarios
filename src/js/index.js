@@ -46,12 +46,13 @@ const resetWindows = () => {
         window.setAttribute("visible", "false");
     });
 };
-const noEditionData = { name: "Indefinida", ed: "Indefinida", image: noImgLink, description: "Indefinida", code: "000000" };
+const noEditionData = { name: "Indefinida", edition: "Indefinida", image: noImgLink, description: "Indefinida", code: "000000" };
 const html5QrCode = new Html5Qrcode("reader");
 const showEditionData = (edito, item, data) => {
     if (html5QrCode.isScanning === true) {
         html5QrCode.stop();
     }
+    console.log(edito, item, data);
     resetWindows();
     const resultWindow = selector('[window="results"]');
     resultWindow.setAttribute("show", "true");
@@ -66,7 +67,7 @@ const showEditionData = (edito, item, data) => {
     const editorial = selector('[result="editorial"]');
     name.textContent = item.name;
     description.textContent = data.description;
-    ed.textContent = data.ed;
+    ed.textContent = data.edition;
     code.textContent = data.code;
     editorial.textContent = edito;
     image.src = data.image;
@@ -80,10 +81,17 @@ const onScanSuccess = (decodedText, decodedResult) => {
     db.editoriales.forEach((editorial) => {
         editorial.items.forEach((item) => {
             item.editions.forEach((edition) => {
+                console.log(edition);
                 if (edition.code === decodedText) {
+                    console.log(edition);
                     showEditionData(editorial.name, item.name, edition);
+                    console.log("existe");
+                    console.log(edition.code, decodedText);
+                    console.log(edition);
                 } else {
                     showEditionData(noEditionData);
+                    console.log("no existe");
+                    console.log(edition.code, decodedText);
                 }
             });
         });
