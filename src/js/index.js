@@ -46,10 +46,12 @@ const resetWindows = () => {
         window.setAttribute("visible", "false");
     });
 };
-
+const noEditionData = ["No Existe", { name: "Indefinida", ed: "Indefinida", img: noImgLink, description: "Indefinida" }];
 const html5QrCode = new Html5Qrcode("reader");
 const showEditionData = (itemName, data) => {
-    const resultWindow = selector('[window="result"]');
+    html5QrCode.stop();
+    resetWindows();
+    const resultWindow = selector('[window="results"]');
     resultWindow.setAttribute("show", "true");
     setTimeout(() => {
         resultWindow.setAttribute("visible", "true");
@@ -74,13 +76,14 @@ const onScanSuccess = (decodedText, decodedResult) => {
     db.editoriales.forEach((editorial) => {
         editorial.items.forEach((item) => {
             item.editions.forEach((edition) => {
-                console.log(edition);
-                showEditionData(item.name, edition);
+                if (edition.code === decodedText) {
+                    showEditionData(item.name, edition);
+                } else {
+                    showEditionData(noEditionData);
+                }
             });
         });
     });
-    html5QrCode.stop();
-    resetWindows();
 };
 
 const changeTheme = () => {

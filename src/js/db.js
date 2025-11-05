@@ -304,6 +304,17 @@ export const db = {
                         },
                     ],
                 },
+                {
+                    name: "Sol",
+                    editions: [
+                        {
+                            description: "Solchesitos",
+                            image: "https://static.wixstatic.com/media/7f1fe6_fbe6f836a31d4c4d80f4fb0a0ce9de58~mv2.jpeg/v1/fill/w_500,h_500,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/7f1fe6_fbe6f836a31d4c4d80f4fb0a0ce9de58~mv2.jpeg",
+                            code: "7503022458352",
+                            edition: "345",
+                        },
+                    ],
+                },
             ],
         },
     ],
