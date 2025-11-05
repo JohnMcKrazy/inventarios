@@ -84,12 +84,12 @@ A:active {
 }
 
 H1 {
-  font-size: 2.2rem;
+  font-size: 1.6rem;
   font-weight: 600;
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 1.4rem;
   font-weight: 600;
 }
 
@@ -226,6 +226,10 @@ OPTION:hover {
   border-radius: var(--br);
   overflow: hidden;
   background: var(--bg_t);
+}
+.card H2 SPAN,
+.card p SPAN {
+  color: var(--color_base);
 }
 
 .btn {

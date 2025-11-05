@@ -48,11 +48,11 @@ const resetWindows = () => {
 };
 const noEditionData = { name: "Indefinida", edition: "Indefinida", image: noImgLink, description: "Indefinida", code: "000000" };
 const html5QrCode = new Html5Qrcode("reader");
-const showEditionData = (edito, item, data) => {
+const showEditionData = (edito, itemName, data) => {
     if (html5QrCode.isScanning === true) {
         html5QrCode.stop();
     }
-    console.log(edito, item, data);
+    console.log(edito, itemName, data);
     resetWindows();
     const resultWindow = selector('[window="results"]');
     resultWindow.setAttribute("show", "true");
@@ -62,12 +62,12 @@ const showEditionData = (edito, item, data) => {
     const name = selector('[result="name"]');
     const description = selector('[result="description"]');
     const image = selector('[result="image"]');
-    const ed = selector('[result="ed"]');
+    const edition = selector('[result="edition"]');
     const code = selector('[result="code"]');
     const editorial = selector('[result="editorial"]');
-    name.textContent = item.name;
+    name.textContent = itemName;
     description.textContent = data.description;
-    ed.textContent = data.edition;
+    edition.textContent = data.edition;
     code.textContent = data.code;
     editorial.textContent = edito;
     image.src = data.image;
