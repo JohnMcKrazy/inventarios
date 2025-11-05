@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title></title>
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="apple-touch-icon" href="" />
+        <link rel="canonical" href="" />
+        <script src="https://unpkg.com/html5-qrcode" type="text/javascript"></script>
+
+        <script type="module" src="./src/js/index.js" async defer></script>
+        <!-- GOOGLE FONTS -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet" />
+        <!-- GOOGLE FONTS -->
+        <link rel="icon" type="image/svg" href="" />
+        <link rel="stylesheet" href="./src/css/style.css" />
+    </head>
+    <body color-scheme="dark">
+        <nav class="nav nav_menu" nav="menu">
+            <div class="menu_control">
+                <button type="button" class="contrast icon_container" action-menu="actions" active-state="false">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" icon="menu">
+                        <path d="M3 4H21V6H3V4ZM3 11H21V13H3V11ZM3 18H21V20H3V18Z"></path>
+                    </svg>
+                </button>
+                <div class="menu_container" menu-container="actions" show="false" visible="false" menu="actions">
+                    <div class="menu_control">
+                        <button type="button" selector="user_btn" class="" action-menu="user" active-state="false" active-menu="user">
+                            <span show="false" class="icon_container">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M4 15H6V20H18V4H6V9H4V3C4 2.44772 4.44772 2 5 2H19C19.5523 2 20 2.44772 20 3V21C20 21.5523 19.5523 22 19 22H5C4.44772 22 4 21.5523 4 21V15ZM10 11V8L15 12L10 16V13H2V11H10Z"></path>
+                                </svg>
+                            </span>
+                            <span show="true" class="icon_container">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path
+                                        d="M3 4.99509C3 3.89323 3.89262 3 4.99509 3H19.0049C20.1068 3 21 3.89262 21 4.99509V19.0049C21 20.1068 20.1074 21 19.0049 21H4.99509C3.89323 21 3 20.1074 3 19.0049V4.99509ZM5 5V19H19V5H5ZM7.97216 18.1808C7.35347 17.9129 6.76719 17.5843 6.22083 17.2024C7.46773 15.2753 9.63602 14 12.1022 14C14.5015 14 16.6189 15.2071 17.8801 17.0472C17.3438 17.4436 16.7664 17.7877 16.1555 18.0718C15.2472 16.8166 13.77 16 12.1022 16C10.3865 16 8.87271 16.8641 7.97216 18.1808ZM12 13C10.067 13 8.5 11.433 8.5 9.5C8.5 7.567 10.067 6 12 6C13.933 6 15.5 7.567 15.5 9.5C15.5 11.433 13.933 13 12 13ZM12 11C12.8284 11 13.5 10.3284 13.5 9.5C13.5 8.67157 12.8284 8 12 8C11.1716 8 10.5 8.67157 10.5 9.5C10.5 10.3284 11.1716 11 12 11Z"
+                                    ></path>
+                                </svg>
+                            </span>
+                        </button>
+                        <div class="menu_container" menu-container="user" show="false" visible="false">
+                            <button type="button" selector="user_btn" class="icon_container" menu-btn="user" active-state="false" active-menu="user">
+                                <span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                        <path d="M4 15H6V20H18V4H6V9H4V3C4 2.44772 4.44772 2 5 2H19C19.5523 2 20 2.44772 20 3V21C20 21.5523 19.5523 22 19 22H5C4.44772 22 4 21.5523 4 21V15ZM10 11V8L15 12L10 16V13H2V11H10Z"></path>
+                                    </svg>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                    <button type="button" class="icon_container" theme-btn>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" show="true" theme-icon="dark">
+                            <path
+                                d="M12 18C8.68629 18 6 15.3137 6 12C6 8.68629 8.68629 6 12 6C15.3137 6 18 8.68629 18 12C18 15.3137 15.3137 18 12 18ZM11 1H13V4H11V1ZM11 20H13V23H11V20ZM3.51472 4.92893L4.92893 3.51472L7.05025 5.63604L5.63604 7.05025L3.51472 4.92893ZM16.9497 18.364L18.364 16.9497L20.4853 19.0711L19.0711 20.4853L16.9497 18.364ZM19.0711 3.51472L20.4853 4.92893L18.364 7.05025L16.9497 5.63604L19.0711 3.51472ZM5.63604 16.9497L7.05025 18.364L4.92893 20.4853L3.51472 19.0711L5.63604 16.9497ZM23 11V13H20V11H23ZM4 11V13H1V11H4Z"
+                            ></path>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" show="false" theme-icon="light">
+                            <path d="M11.3807 2.01886C9.91573 3.38768 9 5.3369 9 7.49999C9 11.6421 12.3579 15 16.5 15C18.6631 15 20.6123 14.0843 21.9811 12.6193C21.6613 17.8537 17.3149 22 12 22C6.47715 22 2 17.5228 2 12C2 6.68514 6.14629 2.33869 11.3807 2.01886Z"></path>
+                        </svg>
+                    </button>
+                    <button type="button" class="icon_container" menu-btn="add" active-state="false">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M4 3H20C20.5523 3 21 3.44772 21 4V20C21 20.5523 20.5523 21 20 21H4C3.44772 21 3 20.5523 3 20V4C3 3.44772 3.44772 3 4 3ZM5 5V19H19V5H5ZM11 11V7H13V11H17V13H13V17H11V13H7V11H11Z"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        <nav class="nav nav_extras" nav="extras">
+            <button type="button" class="icon_container" menu-btn="search" active-state="false">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path
+                        d="M18.031 16.6168L22.3137 20.8995L20.8995 22.3137L16.6168 18.031C15.0769 19.263 13.124 20 11 20C6.032 20 2 15.968 2 11C2 6.032 6.032 2 11 2C15.968 2 20 6.032 20 11C20 13.124 19.263 15.0769 18.031 16.6168ZM16.0247 15.8748C17.2475 14.6146 18 12.8956 18 11C18 7.1325 14.8675 4 11 4C7.1325 4 4 7.1325 4 11C4 14.8675 7.1325 18 11 18C12.8956 18 14.6146 17.2475 15.8748 16.0247L16.0247 15.8748Z"
+                    ></path>
+                </svg>
+            </button>
+            <button type="button" class="contrast icon_container" menu-btn="scan" active-state="false">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M21 16V21H3V16H5V19H19V16H21ZM3 11H21V13H3V11ZM21 8H19V5H5V8H3V3H21V8Z"></path>
+                </svg>
+            </button>
+        </nav>
+        <main>
+            <section class="window" selector="window_editorials" window="editorials" show="false" visible="false">
+                <div class="section_content">
+                    <form form-ref="editorial" action="" class="form">
+                        <select select-ref="editorial">
+                            <option selected name="none">Selecciona una editorial</option>
+                            <option name="salvat">Salvat</option>
+                            <option name="loopa">Loopa</option>
+                            <option name="planeta">Planeta</option>
+                        </select>
+                    </form>
+                    <ul class="content cards_container" cards-container="editorials"></ul>
+                </div>
+            </section>
+            <section class="window" selector="window_scan" window="scan" show="false" visible="false">
+                <div class="section_content">
+                    <span class="reader" id="reader"></span>
+                </div>
+            </section>
+            <section class="window" selector="window_search" window="search" show="true" visible="true">
+                <div class="section_content">
+                    <form form-ref="search" class="form">
+                        <div class="input_control">
+                            <input type="text" placeholder="Buscar" selector="search_input" />
+                            <span class="icon_container">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path
+                                        d="M18.031 16.6168L22.3137 20.8995L20.8995 22.3137L16.6168 18.031C15.0769 19.263 13.124 20 11 20C6.032 20 2 15.968 2 11C2 6.032 6.032 2 11 2C15.968 2 20 6.032 20 11C20 13.124 19.263 15.0769 18.031 16.6168ZM16.0247 15.8748C17.2475 14.6146 18 12.8956 18 11C18 7.1325 14.8675 4 11 4C7.1325 4 4 7.1325 4 11C4 14.8675 7.1325 18 11 18C12.8956 18 14.6146 17.2475 15.8748 16.0247L16.0247 15.8748Z"
+                                    ></path>
+                                </svg>
+                            </span>
+                        </div>
+                    </form>
+                    <ul class="content cards_container" cards-container="results"></ul>
+                </div>
+            </section>
+            <section class="window" selector="window_user" window="user" show="false" visible="false">
+                <div class="section_content">
+                    <span class="img_holder">
+                        <img src="/src/img/no_img.jpg" />
+                    </span>
+                    <h1>Nombre Falso</h1>
+                    <h2>Status</h2>
+                </div>
+            </section>
+            <section class="window" selector="window_results" window="results" show="false" visible="false">
+                <div class="img_container" selector="img_container">
+                    <img src="/src/img/no_img.jpg" class="img_result" selector="img_result" resilt="image" />
+                </div>
+                <div class="section_content">
+                    <h1 selector="name_result" class=" " result="name">Titulos Provicional</h1>
+                    <h1 selector="description_result" class=" " result="description">Titulos Provicional</h1>
+                    <h2 class=" ">Ed: <span selector="ed_result" result="ed">15</span></h2>
+                    <div class="sub_data">
+                        <h3 class=" ">Editorial: <span selector="editorial_result" result="editorial">Salvat</span></h3>
+                        <h3 class=" ">Codigo: <span selector="code_result" result="code">79823475623</span></h3>
+                    </div>
+
+                    <table class="inventario">
+                        <tr class="data_display">
+                            <td class="icon_container">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path
+                                        d="M4 3C3.44772 3 3 3.44772 3 4V20C3 20.5523 3.44772 21 4 21H14C14.5523 21 15 20.5523 15 20V10.6973L17.0215 20.2076C17.1363 20.7479 17.6673 21.0927 18.2075 20.9779L21.142 20.3541C21.6822 20.2393 22.027 19.7083 21.9122 19.1681L19.0015 5.47402C18.8866 4.9338 18.3556 4.58896 17.8154 4.70378L15 5.30221V5C15 4.44772 14.5523 4 14 4H9C9 3.44772 8.55228 3 8 3H4ZM9 6H13V14H9V6ZM13 16V19H9V16H13ZM7 17V19H5V17H7ZM18.7699 18.8137L18.3541 16.8577L19.3323 16.6498L19.748 18.6058L18.7699 18.8137Z"
+                                    ></path>
+                                </svg>
+                            </td>
+                            <td>Coleccionable:</td>
+                            <td class="result" selector="coleccionable_result" result="coleccionable">487</td>
+                        </tr>
+                        <tr class="data_display">
+                            <td class="icon_container">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path
+                                        d="M21.949 10.1118C22.1634 10.912 21.6886 11.7345 20.8884 11.9489L5.2218 16.1467C4.77856 16.2655 4.31138 16.0674 4.08866 15.6662L1.46582 10.9415L2.91471 10.5533L5.3825 12.9979L10.4778 11.6326L5.96728 4.55896L7.89913 4.04132L14.8505 10.4609L20.1119 9.05113C20.9121 8.83671 21.7346 9.31159 21.949 10.1118ZM4.00013 19H20.0001V21H4.00013V19Z"
+                                    ></path>
+                                </svg>
+                            </td>
+                            <td>Exportaciones:</td>
+                            <td class="result" selector="exportaciones_result" result="exportaciones">187</td>
+                        </tr>
+                        <tr class="data_display">
+                            <td class="icon_container">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM9.71002 19.6674C8.74743 17.6259 8.15732 15.3742 8.02731 13H4.06189C4.458 16.1765 6.71639 18.7747 9.71002 19.6674ZM10.0307 13C10.1811 15.4388 10.8778 17.7297 12 19.752C13.1222 17.7297 13.8189 15.4388 13.9693 13H10.0307ZM19.9381 13H15.9727C15.8427 15.3742 15.2526 17.6259 14.29 19.6674C17.2836 18.7747 19.542 16.1765 19.9381 13ZM4.06189 11H8.02731C8.15732 8.62577 8.74743 6.37407 9.71002 4.33256C6.71639 5.22533 4.458 7.8235 4.06189 11ZM10.0307 11H13.9693C13.8189 8.56122 13.1222 6.27025 12 4.24799C10.8778 6.27025 10.1811 8.56122 10.0307 11ZM14.29 4.33256C15.2526 6.37407 15.8427 8.62577 15.9727 11H19.9381C19.542 7.8235 17.2836 5.22533 14.29 4.33256Z"
+                                    ></path>
+                                </svg>
+                            </td>
+
+                            <td>E-Commerce:</td>
+                            <td class="result" selector="e-commerce_result" result="e-commerce">567</td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+            <section class="window" selector="window_add" window="add" show="false" visible="false">
+                <hi> Add </hi>
+            </section>
+        </main>
+    </body>
+    <template template-ref="option">
+        <option value="" selector="option"></option>
+    </template>
+    <template template-ref="edition_card">
+        <li class="card item_card" card="edition">
+            <img src="/src/" selector="edition_image" />
+            <div class="card_content">
+                <h1 class="name" selector="edition_name">Nombre Provicional</h1>
+                <span class="editorial_image"><img src="./src/img/Logo ollamani.jpg" selector="edition_editorial_image" /></span>
+                <h2 class="edition">Ed: <span selector="edition_number"></span></h2>
+                <p class="code">Codigo: <span class="" selector="edition_code">77812873478</span></p>
+                <button type="button" class="btn" btn-ref="">Abrir Contenido</button>
+            </div>
+        </li>
+    </template>
+    <template template-ref="item_card">
+        <li class="card colleccion_card" card="colleccion">
+            <h1 class="" selector="name">Nombre Provicional</h1>
+            <span class="" selector="image"><img src="" /></span>
+            <img src="https://cdn.deagostini.com/dea/live/media/entrega-011q24026-minilibros-26-1710142788671-1.jpg" class="card_img" />
+        </li>
+    </template>
+</html>
