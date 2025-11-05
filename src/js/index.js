@@ -46,10 +46,12 @@ const resetWindows = () => {
         window.setAttribute("visible", "false");
     });
 };
-const noEditionData = ["No Existe", { name: "Indefinida", ed: "Indefinida", img: noImgLink, description: "Indefinida" }];
+const noEditionData = { name: "Indefinida", ed: "Indefinida", image: noImgLink, description: "Indefinida", code: "000000" };
 const html5QrCode = new Html5Qrcode("reader");
-const showEditionData = (itemName, data) => {
-    html5QrCode.stop();
+const showEditionData = (edito, item, data) => {
+    if (html5QrCode.isScanning === true) {
+        html5QrCode.stop();
+    }
     resetWindows();
     const resultWindow = selector('[window="results"]');
     resultWindow.setAttribute("show", "true");
@@ -61,10 +63,12 @@ const showEditionData = (itemName, data) => {
     const image = selector('[result="image"]');
     const ed = selector('[result="ed"]');
     const code = selector('[result="code"]');
-    name.textContent = itemName;
+    const editorial = selector('[result="editorial"]');
+    name.textContent = item.name;
     description.textContent = data.description;
     ed.textContent = data.ed;
     code.textContent = data.code;
+    editorial.textContent = edito;
     image.src = data.image;
 };
 const onScanSuccess = (decodedText, decodedResult) => {
@@ -77,7 +81,7 @@ const onScanSuccess = (decodedText, decodedResult) => {
         editorial.items.forEach((item) => {
             item.editions.forEach((edition) => {
                 if (edition.code === decodedText) {
-                    showEditionData(item.name, edition);
+                    showEditionData(editorial.name, item.name, edition);
                 } else {
                     showEditionData(noEditionData);
                 }
@@ -194,3 +198,4 @@ const setSearchStartCards = () => {
 };
 setSearchStartCards();
 const searchInput = selector('[selector="search_input"]');
+showEditionData("Indefinida", "no existe", noEditionData);

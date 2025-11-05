@@ -273,9 +273,6 @@ SECTION {
   height: 100%;
 }
 
-.inventario {
-  width: 100%;
-}
 .inventario .data_display SVG {
   fill: var(--color_base);
 }
