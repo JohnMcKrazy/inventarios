@@ -81,17 +81,12 @@ const onScanSuccess = (decodedText, decodedResult) => {
     db.editoriales.forEach((editorial) => {
         editorial.items.forEach((item) => {
             item.editions.forEach((edition) => {
-                console.log(edition);
                 if (edition.code === decodedText) {
                     console.log(edition);
                     showEditionData(editorial.name, item.name, edition);
                     console.log("existe");
                     console.log(edition.code, decodedText);
                     console.log(edition);
-                } else {
-                    showEditionData(noEditionData);
-                    console.log("no existe");
-                    console.log(edition.code, decodedText);
                 }
             });
         });
