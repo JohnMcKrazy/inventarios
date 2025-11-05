@@ -9,7 +9,7 @@ const pageBody = selector("body");
 
 const menuBtns = selectorAll("[menu-btn]");
 const sectionWindows = selectorAll("[window]");
-const noImgLink = "/src/img/no_img.jpg";
+const noImgLink = "./src/img/no_img.jpg";
 const scannerConfig = {
     fps: 10,
     qrbox: { width: 250, height: 250 },
