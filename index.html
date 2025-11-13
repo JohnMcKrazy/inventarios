@@ -23,14 +23,14 @@
     <body color-scheme="dark">
         <nav class="nav nav_menu" nav="menu">
             <div class="menu_control">
-                <button type="button" class="contrast icon_container" action-menu="actions" active-state="false">
+                <button type="button" class="contrast icon_container" action-menu="actions" btn-active="false">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" icon="menu">
                         <path d="M3 4H21V6H3V4ZM3 11H21V13H3V11ZM3 18H21V20H3V18Z"></path>
                     </svg>
                 </button>
                 <div class="menu_container" menu-container="actions" show="false" visible="false" menu="actions">
                     <div class="menu_control">
-                        <button type="button" selector="user_btn" class="" action-menu="user" active-state="false" active-menu="user">
+                        <button type="button" selector="user_btn" class="" action-menu="user" btn-active="false" active-menu="user">
                             <span show="false" class="icon_container">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                                     <path d="M4 15H6V20H18V4H6V9H4V3C4 2.44772 4.44772 2 5 2H19C19.5523 2 20 2.44772 20 3V21C20 21.5523 19.5523 22 19 22H5C4.44772 22 4 21.5523 4 21V15ZM10 11V8L15 12L10 16V13H2V11H10Z"></path>
@@ -45,7 +45,7 @@
                             </span>
                         </button>
                         <div class="menu_container" menu-container="user" show="false" visible="false">
-                            <button type="button" selector="user_btn" class="icon_container" menu-btn="user" active-state="false" active-menu="user">
+                            <button type="button" selector="user_btn" class="icon_container" menu-btn="user" btn-active="false" active-menu="user">
                                 <span>
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                                         <path d="M4 15H6V20H18V4H6V9H4V3C4 2.44772 4.44772 2 5 2H19C19.5523 2 20 2.44772 20 3V21C20 21.5523 19.5523 22 19 22H5C4.44772 22 4 21.5523 4 21V15ZM10 11V8L15 12L10 16V13H2V11H10Z"></path>
@@ -64,28 +64,36 @@
                             <path d="M11.3807 2.01886C9.91573 3.38768 9 5.3369 9 7.49999C9 11.6421 12.3579 15 16.5 15C18.6631 15 20.6123 14.0843 21.9811 12.6193C21.6613 17.8537 17.3149 22 12 22C6.47715 22 2 17.5228 2 12C2 6.68514 6.14629 2.33869 11.3807 2.01886Z"></path>
                         </svg>
                     </button>
-                    <button type="button" class="icon_container" menu-btn="add" active-state="false">
+                    <button type="button" class="icon_container" menu-btn="add" btn-active="false">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                             <path d="M4 3H20C20.5523 3 21 3.44772 21 4V20C21 20.5523 20.5523 21 20 21H4C3.44772 21 3 20.5523 3 20V4C3 3.44772 3.44772 3 4 3ZM5 5V19H19V5H5ZM11 11V7H13V11H17V13H13V17H11V13H7V11H11Z"></path>
                         </svg>
                     </button>
                 </div>
             </div>
+            <div class="menu_control">
+                <form form-ref="search" class="form">
+                    <div class="input_control">
+                        <input type="text" placeholder="Buscar" selector="search_input" />
+                        <button type="submit" class="icon_container" search-btn="search" btn-active="false">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path
+                                    d="M18.031 16.6168L22.3137 20.8995L20.8995 22.3137L16.6168 18.031C15.0769 19.263 13.124 20 11 20C6.032 20 2 15.968 2 11C2 6.032 6.032 2 11 2C15.968 2 20 6.032 20 11C20 13.124 19.263 15.0769 18.031 16.6168ZM16.0247 15.8748C17.2475 14.6146 18 12.8956 18 11C18 7.1325 14.8675 4 11 4C7.1325 4 4 7.1325 4 11C4 14.8675 7.1325 18 11 18C12.8956 18 14.6146 17.2475 15.8748 16.0247L16.0247 15.8748Z"
+                                ></path>
+                            </svg>
+                        </button>
+                    </div>
+                </form>
+                <button type="button" class="contrast icon_container" menu-btn="scan" btn-active="false">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M21 16V21H3V16H5V19H19V16H21ZM3 11H21V13H3V11ZM21 8H19V5H5V8H3V3H21V8Z"></path>
+                    </svg>
+                </button>
+            </div>
         </nav>
-        <nav class="nav nav_extras" nav="extras">
-            <button type="button" class="icon_container" menu-btn="search" active-state="false">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                    <path
-                        d="M18.031 16.6168L22.3137 20.8995L20.8995 22.3137L16.6168 18.031C15.0769 19.263 13.124 20 11 20C6.032 20 2 15.968 2 11C2 6.032 6.032 2 11 2C15.968 2 20 6.032 20 11C20 13.124 19.263 15.0769 18.031 16.6168ZM16.0247 15.8748C17.2475 14.6146 18 12.8956 18 11C18 7.1325 14.8675 4 11 4C7.1325 4 4 7.1325 4 11C4 14.8675 7.1325 18 11 18C12.8956 18 14.6146 17.2475 15.8748 16.0247L16.0247 15.8748Z"
-                    ></path>
-                </svg>
-            </button>
-            <button type="button" class="contrast icon_container" menu-btn="scan" active-state="false">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                    <path d="M21 16V21H3V16H5V19H19V16H21ZM3 11H21V13H3V11ZM21 8H19V5H5V8H3V3H21V8Z"></path>
-                </svg>
-            </button>
-        </nav>
+        <dialog>
+            <h1>Dialogo</h1>
+        </dialog>
         <main>
             <section class="window" selector="window_editorials" window="editorials" show="false" visible="false">
                 <div class="section_content">
@@ -107,19 +115,20 @@
             </section>
             <section class="window" selector="window_search" window="search" show="true" visible="true">
                 <div class="section_content">
-                    <form form-ref="search" class="form">
-                        <div class="input_control">
-                            <input type="text" placeholder="Buscar" selector="search_input" />
-                            <span class="icon_container">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                    <path
-                                        d="M18.031 16.6168L22.3137 20.8995L20.8995 22.3137L16.6168 18.031C15.0769 19.263 13.124 20 11 20C6.032 20 2 15.968 2 11C2 6.032 6.032 2 11 2C15.968 2 20 6.032 20 11C20 13.124 19.263 15.0769 18.031 16.6168ZM16.0247 15.8748C17.2475 14.6146 18 12.8956 18 11C18 7.1325 14.8675 4 11 4C7.1325 4 4 7.1325 4 11C4 14.8675 7.1325 18 11 18C12.8956 18 14.6146 17.2475 15.8748 16.0247L16.0247 15.8748Z"
-                                    ></path>
-                                </svg>
-                            </span>
-                        </div>
-                    </form>
-                    <ul class="content cards_container" cards-container="results"></ul>
+                    <div class="btns_container">
+                        <button type="button" btn-active="false" submenu-btn="results_editions">Editoriales</button>
+                        <button type="button" btn-active="false" submenu-btn="results_items">Items</button>
+                        <button type="button" btn-active="true" submenu-btn="results_editorials">Ediciones</button>
+                    </div>
+                    <ul class="content cards_container" cards-container="results_editions" show="true" visible="true" subwindow="results_editions">
+                        <h1>Prueba de ediciones</h1>
+                    </ul>
+                    <ul class="content cards_container" cards-container="results_items" show="false" visible="false" subwindow="results_items">
+                        <h1>Prueba de items</h1>
+                    </ul>
+                    <ul class="content cards_container" cards-container="results_editorials" show="false" visible="false" subwindow="results_editorials">
+                        <h1>Prueba de editoriales</h1>
+                    </ul>
                 </div>
             </section>
             <section class="window" selector="window_user" window="user" show="false" visible="false">
@@ -132,12 +141,12 @@
                 </div>
             </section>
             <section class="window" selector="window_results" window="results" show="false" visible="false">
-                <div class="img_container" selector="img_container">
-                    <img src="./src/img/no_img.jpg" class="img_result" selector="img_result" result="image" />
-                </div>
                 <div class="section_content">
-                    <h1 selector="name_result" result="name">Titulos Provicional</h1>
-                    <p selector="description_result" result="description">Descripción Provicional</p>
+                    <div class="img_container" selector="img_container">
+                        <img src="./src/img/no_img.jpg" class="img_result" selector="img_result" result="image" />
+                    </div>
+                    <p selector="name_result" result="name">Titulos Provicional</p>
+                    <h1 selector="description_result" result="description">Descripción Provicional</h1>
                     <h2>Ed: <span selector="ed_result" result="edition">15</span></h2>
                     <div class="sub_data">
                         <h3>Editorial: <span selector="editorial_result" result="editorial">Salvat</span></h3>
@@ -183,7 +192,9 @@
                 </div>
             </section>
             <section class="window" selector="window_add" window="add" show="false" visible="false">
-                <hi> Add </hi>
+                <div class="section_content">
+                    <hi> Add </hi>
+                </div>
             </section>
         </main>
     </body>
@@ -191,12 +202,12 @@
         <option value="" selector="option"></option>
     </template>
     <template template-ref="edition_card">
-        <li class="card item_card" card="edition">
+        <li class="card edition_card" card="edition">
             <img src="/src/" selector="edition_image" />
             <div class="card_content">
+                <span class="editorial_image"><img src="./src/img/Logo ollamani.jpg" selector="edition_editorial_image" /></span>
                 <h1 class="name" selector="edition_name">Nombre Provicional</h1>
                 <p class="description" selector="edition_description">Descripción Provicional</p>
-                <span class="editorial_image"><img src="./src/img/Logo ollamani.jpg" selector="edition_editorial_image" /></span>
                 <h2 class="ed">Ed: <span selector="edition_number"></span></h2>
                 <p class="code">Codigo: <span class="" selector="edition_code">77812873478</span></p>
                 <button type="button" class="btn" btn-ref="">Abrir Contenido</button>

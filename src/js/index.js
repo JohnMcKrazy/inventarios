@@ -8,8 +8,23 @@ const themeBtn = selector("[theme-btn]");
 const pageBody = selector("body");
 
 const menuBtns = selectorAll("[menu-btn]");
+const submenuBtns = selectorAll("[submenu-btn]");
 const sectionWindows = selectorAll("[window]");
+const sectionSubindows = selectorAll("[subwindow]");
+
+const dialogWindow = selector("dialog");
+const menuActionBtns = selectorAll("[action-menu]");
+const serachResult = selector('[selector="search_result"]');
+const itemCardTemplate = selector("[template-ref='item_card']").content;
+const editionCardTemplate = selector("[template-ref='edition_card']").content;
+const resultEditionContainer = selector('[cards-container="results_editions"]');
+const searchInput = selector('[selector="search_input"]');
+const searchBtn = selector("[search-btn]");
+
 const noImgLink = "./src/img/no_img.jpg";
+const noEditionData = { name: "Indefinida", edition: "Indefinida", image: noImgLink, description: "Indefinida", code: "000000" };
+const html5QrCode = new Html5Qrcode("reader");
+
 const scannerConfig = {
     fps: 10,
     qrbox: { width: 250, height: 250 },
@@ -40,14 +55,22 @@ const sanitizeInput = (inputValue) => {
     return div.innerHTML;
 };
 const resetWindows = () => {
-    menuBtns.forEach((btn) => btn.setAttribute("active-state", "false"));
+    menuBtns.forEach((btn) => btn.setAttribute("btn-active", "false"));
     sectionWindows.forEach((window) => {
         window.setAttribute("show", "false");
         window.setAttribute("visible", "false");
     });
+    if (html5QrCode.isScanning === true) {
+        html5QrCode.stop();
+    }
 };
-const noEditionData = { name: "Indefinida", edition: "Indefinida", image: noImgLink, description: "Indefinida", code: "000000" };
-const html5QrCode = new Html5Qrcode("reader");
+const resetSubwindows = () => {
+    submenuBtns.forEach((btn) => btn.setAttribute("btn-active", "false"));
+    sectionSubindows.forEach((subwindow) => {
+        subwindow.setAttribute("show", "false");
+        subwindow.setAttribute("visible", "false");
+    });
+};
 const showEditionData = (edito, itemName, data) => {
     if (html5QrCode.isScanning === true) {
         html5QrCode.stop();
@@ -100,49 +123,56 @@ const changeTheme = () => {
     });
     pageBody.setAttribute("color-scheme", pageBody.getAttribute("color-scheme") === "dark" ? "light" : "dark");
 };
-themeBtn.addEventListener("click", changeTheme);
 
+const windowActions = (target, state, container) => {
+    const targetWindow = selector(`[${target}="${container}"]`);
+
+    switch (state) {
+        case "true":
+            targetWindow.setAttribute("visible", "false");
+            setTimeout(() => {
+                targetWindow.setAttribute("show", "false");
+            }, 500);
+            break;
+        case "false":
+            targetWindow.setAttribute("show", "true");
+            setTimeout(() => {
+                targetWindow.setAttribute("visible", "true");
+            }, 100);
+            break;
+    }
+};
+submenuBtns.forEach((submenuBtn) => {
+    submenuBtn.addEventListener("click", () => {
+        const target = submenuBtn.getAttribute("submenu-btn");
+        const currentState = submenuBtn.getAttribute("btn-active");
+        if (currentState !== "true") {
+            resetSubwindows();
+            windowActions("subwindow", currentState, target);
+            submenuBtn.setAttribute("btn-active", currentState === "true" ? "false" : "true");
+        }
+    });
+});
 menuBtns.forEach((menuBtn) => {
     menuBtn.addEventListener("click", () => {
         const target = menuBtn.getAttribute("menu-btn");
-        const currentState = menuBtn.getAttribute("active-state");
+        const currentState = menuBtn.getAttribute("btn-active");
         if (currentState !== "true") {
             resetWindows();
 
             if (target === "scan") {
                 html5QrCode.start({ facingMode: "environment" }, scannerConfig, onScanSuccess);
-            } else {
-                if (html5QrCode.isScanning === true) {
-                    html5QrCode.stop();
-                }
             }
 
-            const targetWindow = selector(`[window="${target}"]`);
-
-            switch (currentState) {
-                case "true":
-                    targetWindow.setAttribute("visible", "false");
-                    setTimeout(() => {
-                        targetWindow.setAttribute("show", "false");
-                    }, 500);
-                    break;
-                case "false":
-                    targetWindow.setAttribute("show", "true");
-                    setTimeout(() => {
-                        targetWindow.setAttribute("visible", "true");
-                    }, 100);
-                    break;
-            }
-            menuBtn.setAttribute("active-state", currentState === "true" ? "false" : "true");
+            windowActions("window", currentState, target);
+            menuBtn.setAttribute("btn-active", currentState === "true" ? "false" : "true");
         }
     });
 });
-const menuActionBtns = selectorAll("[action-menu]");
-const serachResult = selector('[selector="search_result"]');
 
 menuActionBtns.forEach((menuActionBtn) => {
     menuActionBtn.addEventListener("click", () => {
-        const currentState = menuActionBtn.getAttribute("active-state");
+        const currentState = menuActionBtn.getAttribute("btn-active");
         const target = menuActionBtn.getAttribute("action-menu");
         const targetMenu = selector(`[menu-container="${target}"]`);
         switch (currentState) {
@@ -159,17 +189,10 @@ menuActionBtns.forEach((menuActionBtn) => {
                 }, 100);
                 break;
         }
-        menuActionBtn.setAttribute("active-state", currentState === "true" ? "false" : "true");
+        menuActionBtn.setAttribute("btn-active", currentState === "true" ? "false" : "true");
     });
 });
 
-const setSearchResult = (item) => {
-    console.log(item);
-};
-
-const searchBtn = selector("[action-btn='search']");
-const itemCardTemplate = selector("[template-ref='item_card']").content;
-const editionCardTemplate = selector("[template-ref='edition_card']").content;
 const createEditionCard = (data, itemName) => {
     /* console.log(data); */
     const newEdition = editionCardTemplate.cloneNode(true);
@@ -187,18 +210,37 @@ const createEditionCard = (data, itemName) => {
     return newEdition;
 };
 const setSearchStartCards = () => {
-    const resultContainer = selector('[cards-container="results"]');
-    deleteChildElements(resultContainer);
-    db.editoriales.forEach((editorial) => {
-        editorial.items.forEach((item) => {
-            /* console.log(item); */
-            item.editions.forEach((edition) => {
-                /* console.log(edition); */
-                resultContainer.appendChild(createEditionCard(edition, item.name));
-            });
-        });
-    });
+    db.editoriales[0].items[0].editions[0];
+    const editorial = db.editoriales[0];
+    const item = editorial.items[0];
+    const edition = item.editions[0];
+    showEditionData(editorial.name, item.name, edition);
 };
 setSearchStartCards();
-const searchInput = selector('[selector="search_input"]');
-showEditionData("Indefinida", "no existe", noEditionData);
+
+searchBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    const searchText = sanitizeInput(searchInput.value);
+    console.log(searchText);
+    resetWindows();
+    windowActions("window", "false", "search");
+    searchBtn.setAttribute("btn-active", "true");
+    const dataSearchEdition = "";
+    const searchData = [];
+    const searchRef = (ref) => {
+        const exist = ref.name.toLowerCase().includes(searchText) ? "Existe" : "No existe";
+        console.log(`${ref.name} ${exist}`);
+    };
+    db.editoriales.forEach((editorial) => {
+        searchRef(editorial);
+        editorial.items.forEach((item) => {
+            searchRef(item);
+        });
+    });
+    const dataSearchItem = "";
+    const dataSearchEditorial = "";
+    searchInput.value = null;
+});
+
+/* dialogWindow.showModal(); */
+themeBtn.addEventListener("click", changeTheme);

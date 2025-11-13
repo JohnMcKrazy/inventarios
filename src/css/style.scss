@@ -132,26 +132,35 @@ OPTION {
 }
 .nav {
     position: fixed;
-    top: 1rem;
+    top: 0;
     width: fit-content;
+    padding: 1rem 2rem;
     z-index: 5;
-    BUTTON {
+    width: 100%;
+    left: 0;
+    right: 0;
+    background: var(--bg_t);
+    @include flex(row, space-between, center);
+    BUTTON:not([search-btn]) {
         background: var(--bg_t);
+        border-radius: var(--br);
+    }
+    .menu_control {
+        @include flexCenter();
     }
 }
 .menu_control {
     width: fit-content;
+    @include flex(row, center, center);
+    gap: 0.5rem;
 }
 .menu_container {
     @include flex(column, center, center);
+    gap: 0.25rem;
+    position: absolute;
+    top: calc(100% + 2rem);
 }
-.nav_menu {
-    left: 1rem;
-}
-.nav_extras {
-    right: 1rem;
-    @include flexCenter();
-}
+
 .icon_container {
     width: var(--iconSize);
     height: var(--iconSize);
@@ -164,26 +173,39 @@ OPTION {
 }
 .form {
     @include flexCenter();
+    width: 100%;
 }
 .input_control {
     @include flex(row, space-between, center);
     gap: 0.5rem;
     background: var(--bg_t);
     padding: 0 1rem;
-    border-radius: var(--br_w);
+    border-radius: var(--br);
+    width: 100%;
+    max-width: 600px;
+    BUTTON {
+        background: none;
+    }
 }
 .cards_container {
     @include flex(row, center, flex-start);
     flex-wrap: wrap;
-
     gap: 1rem;
     width: 100%;
+    padding-top: 2rem;
 }
 .img_holder {
+    position: relative;
     border-radius: 50%;
     overflow: hidden;
     width: 15rem;
     height: 15rem;
+    IMG {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
 }
 .card {
     width: 100%;
@@ -198,13 +220,7 @@ OPTION {
         }
     }
 }
-.btn {
-    width: 100%;
-    padding: 1rem;
-    background: var(--color_base);
-    border-radius: var(--br);
-}
-.item_card {
+.edition_card {
     @include flex(row, space-between, flex-start);
     max-width: 30rem;
     IMG {
@@ -214,23 +230,62 @@ OPTION {
     .card_content {
         height: 100%;
         padding: 1rem;
-
-        SPAN {
+        @include flex(column, center, center);
+        gap: 0.5rem;
+        .editorial_image {
+            width: 100%;
             IMG {
+                float: right;
                 height: 2rem;
             }
         }
     }
 }
+.btn {
+    width: 100%;
+    padding: 1rem;
+    background: var(--color_base);
+    border-radius: var(--br);
+}
+.btns_container {
+    @include flex(row, space-evenly, center);
+    border-top: solid 2px var(--color_base);
+    border-bottom: solid 2px var(--color_base);
+    width: 100%;
+    BUTTON {
+        padding: 1rem 0;
+        width: 100%;
+    }
+}
+DIALOG {
+    top: 8rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    border-radius: var(--br);
+    background: var(--bg_t);
+    padding: 0.5rem 1rem;
+}
+dialog::backdrop {
+    background-color: var(--bg);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+}
+
 MAIN {
     height: 100vh;
 }
 SECTION {
-    height: 100%;
+    .section_content {
+        --navHeight: 6rem;
+        margin-top: var(--navHeight);
+    }
 }
+
 .section_content {
     @include flex(column, flex-start, center);
-    padding: 2rem;
     gap: 0.5rem;
     width: 100%;
     height: fit-content;
@@ -247,15 +302,16 @@ SECTION {
 }
 .img_container {
     position: relative;
-    height: 50vh;
+    height: 40rem;
+    max-height: 50vh;
     width: 100%;
-    background: linear-gradient(transparent, var(--bg));
     overflow: hidden;
     IMG {
         position: absolute;
         height: 100%;
         width: 100%;
-        z-index: -1;
+
+        object-fit: contain;
     }
 }
 SPAN {
@@ -282,4 +338,10 @@ SPAN {
 .reader {
     width: 100%;
     height: 100%;
+}
+[btn-active="true"] {
+    background: var(--color_base);
+}
+[btn-active="false"] {
+    background: var(--bg);
 }
