@@ -45,12 +45,17 @@
                             </span>
                         </button>
                         <div class="menu_container" menu-container="user" show="false" visible="false">
-                            <button type="button" selector="user_btn" class="icon_container" menu-btn="user" btn-active="false" active-menu="user">
+                            <button type="button" user-btn="logout" class="icon_container">
                                 <span>
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                                         <path d="M4 15H6V20H18V4H6V9H4V3C4 2.44772 4.44772 2 5 2H19C19.5523 2 20 2.44772 20 3V21C20 21.5523 19.5523 22 19 22H5C4.44772 22 4 21.5523 4 21V15ZM10 11V8L15 12L10 16V13H2V11H10Z"></path>
                                     </svg>
                                 </span>
+                            </button>
+                            <button type="button" user-btn="info" class="icon_container" menu-btn="user" btn-active="false" active-menu="user">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M3 6H21V18H3V6ZM2 4C1.44772 4 1 4.44772 1 5V19C1 19.5523 1.44772 20 2 20H22C22.5523 20 23 19.5523 23 19V5C23 4.44772 22.5523 4 22 4H2ZM13 9H19V11H13V9ZM18 13H13V15H18V13ZM6 13H7V16H9V11H6V13ZM9 8H7V10H9V8Z"></path>
+                                </svg>
                             </button>
                         </div>
                     </div>
@@ -91,22 +96,16 @@
                 </button>
             </div>
         </nav>
-        <dialog>
-            <h1>Dialogo</h1>
+        <dialog close-modal-window accent="good">
+            <div class="content">
+                <h1 dialog-ref="title">Error</h1>
+                <p dialog-ref="description">Debes</p>
+                <button class="basic_btn" close-modal-btn>Aceptar</button>
+            </div>
         </dialog>
         <main>
             <section class="window" selector="window_editorials" window="editorials" show="false" visible="false">
-                <div class="section_content">
-                    <form form-ref="editorial" action="" class="form">
-                        <select select-ref="editorial">
-                            <option selected name="none">Selecciona una editorial</option>
-                            <option name="salvat">Salvat</option>
-                            <option name="loopa">Loopa</option>
-                            <option name="planeta">Planeta</option>
-                        </select>
-                    </form>
-                    <ul class="content cards_container" cards-container="editorials"></ul>
-                </div>
+                <div class="section_content"></div>
             </section>
             <section class="window" selector="window_scan" window="scan" show="false" visible="false">
                 <div class="section_content">
@@ -116,18 +115,14 @@
             <section class="window" selector="window_search" window="search" show="true" visible="true">
                 <div class="section_content">
                     <div class="btns_container">
-                        <button type="button" btn-active="false" submenu-btn="results_editions">Editoriales</button>
-                        <button type="button" btn-active="false" submenu-btn="results_items">Items</button>
-                        <button type="button" btn-active="true" submenu-btn="results_editorials">Ediciones</button>
+                        <button type="button" btn-active="true" submenu-btn="results_items">Items<span count="items">0</span></button>
+                        <button type="button" btn-active="false" submenu-btn="results_editions">Ediciones<span count="editions">0</span></button>
                     </div>
-                    <ul class="content cards_container" cards-container="results_editions" show="true" visible="true" subwindow="results_editions">
+                    <ul class="content cards_container" cards-container="results_editions" show="false" visible="false" subwindow="results_editions">
                         <h1>Prueba de ediciones</h1>
                     </ul>
-                    <ul class="content cards_container" cards-container="results_items" show="false" visible="false" subwindow="results_items">
+                    <ul class="content cards_container" cards-container="results_items" show="true" visible="true" subwindow="results_items">
                         <h1>Prueba de items</h1>
-                    </ul>
-                    <ul class="content cards_container" cards-container="results_editorials" show="false" visible="false" subwindow="results_editorials">
-                        <h1>Prueba de editoriales</h1>
                     </ul>
                 </div>
             </section>
@@ -203,22 +198,31 @@
     </template>
     <template template-ref="edition_card">
         <li class="card edition_card" card="edition">
-            <img src="/src/" selector="edition_image" />
+            <img src="/src/" selector="image" />
             <div class="card_content">
-                <span class="editorial_image"><img src="./src/img/Logo ollamani.jpg" selector="edition_editorial_image" /></span>
-                <h1 class="name" selector="edition_name">Nombre Provicional</h1>
-                <p class="description" selector="edition_description">Descripción Provicional</p>
-                <h2 class="ed">Ed: <span selector="edition_number"></span></h2>
-                <p class="code">Codigo: <span class="" selector="edition_code">77812873478</span></p>
+                <span class="editorial_image"><img src="./src/img/Logo ollamani.jpg" selector="editorial_image" /></span>
+                <h1 class="name" selector="name">Nombre Provicional</h1>
+                <p class="description">Descripción: <span selector="description"></span></p>
+                <h2 class="ed">Ed: <span selector="edition"></span></h2>
+                <p class="code">Codigo: <span class="" selector="code">77812873478</span></p>
                 <button type="button" class="btn" btn-ref="">Abrir Contenido</button>
             </div>
         </li>
     </template>
     <template template-ref="item_card">
-        <li class="card colleccion_card" card="colleccion">
-            <h1 class="" selector="name">Nombre Provicional</h1>
-            <span class="" selector="image"><img src="" /></span>
-            <img src="https://cdn.deagostini.com/dea/live/media/entrega-011q24026-minilibros-26-1710142788671-1.jpg" class="card_img" />
+        <li class="card item_card" card="item">
+            <h1 class="item_name name" selector="name">Nombre Provicional</h1>
+            <span selector="count">0</span>
+            <ul class="pills_container"></ul>
+        </li>
+    </template>
+    <template template-ref="edition_pill">
+        <li class="pill edition_pill" pill="edition">
+            <img src="/src/" selector="image" />
+            <div class="pill_content">
+                <h1 class="pill_name name" selector="name">Nombre Provicional</h1>
+                <h2 class="ed">Ed: <span selector="edition"></span></h2>
+            </div>
         </li>
     </template>
 </html>

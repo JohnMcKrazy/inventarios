@@ -17,7 +17,9 @@ const menuActionBtns = selectorAll("[action-menu]");
 const serachResult = selector('[selector="search_result"]');
 const itemCardTemplate = selector("[template-ref='item_card']").content;
 const editionCardTemplate = selector("[template-ref='edition_card']").content;
-const resultEditionContainer = selector('[cards-container="results_editions"]');
+const editionPillTemplate = selector("[template-ref='edition_pill']").content;
+const resultEditionsContainer = selector('[cards-container="results_editions"]');
+const resultitemsContainer = selector('[cards-container="results_items"]');
 const searchInput = selector('[selector="search_input"]');
 const searchBtn = selector("[search-btn]");
 
@@ -75,7 +77,6 @@ const showEditionData = (edito, itemName, data) => {
     if (html5QrCode.isScanning === true) {
         html5QrCode.stop();
     }
-    console.log(edito, itemName, data);
     resetWindows();
     const resultWindow = selector('[window="results"]');
     resultWindow.setAttribute("show", "true");
@@ -197,17 +198,47 @@ const createEditionCard = (data, itemName) => {
     /* console.log(data); */
     const newEdition = editionCardTemplate.cloneNode(true);
     const card = selector('[selector="card"]', newEdition);
-    const edition = selector('[selector="edition_number"]', newEdition);
-    const code = selector('[selector="edition_code"]', newEdition);
-    const name = selector('[selector="edition_name"]', newEdition);
-    const image = selector('[selector="edition_image"]', newEdition);
-    const editorialImage = selector('[selector="edition_editorial_image"]', newEdition);
+    const edition = selector('[selector="edition"]', newEdition);
+    const code = selector('[selector="code"]', newEdition);
+    const name = selector('[selector="name"]', newEdition);
+    const description = selector('[selector="description"]', newEdition);
+    const image = selector('[selector="image"]', newEdition);
+    const editorialImage = selector('[selector="editorial_image"]', newEdition);
     code.textContent = data.code;
     edition.textContent = data.edition;
     name.textContent = itemName;
+    description.textContent = data.description;
     /* console.log(data.image); */
     image.src = data.image === "" ? noImgLink : data.image;
-    return newEdition;
+    resultEditionsContainer.appendChild(newEdition);
+};
+const createEditionPill = (ed, container) => {
+    const newEdition = editionPillTemplate.cloneNode(true);
+    const name = selector('[selector="name"]', newEdition);
+    const edition = selector('[selector="edition"]', newEdition);
+    const image = selector('[selector="image"]', newEdition);
+    image.src = ed.image === "" ? noImgLink : ed.image;
+
+    console.log(ed);
+    name.textContent = ed.description;
+    edition.textContent = ed.edition;
+    container.appendChild(newEdition);
+};
+const createItemCard = (item) => {
+    const newItem = itemCardTemplate.cloneNode(true);
+    const card = selector('[selector="card"]', newItem);
+    const count = selector('[selector="count"]', newItem);
+    const name = selector('[selector="name"]', newItem);
+    const pillsContainer = selector(".pills_container", newItem);
+    name.textContent = item.name;
+    let thisCount = 0;
+    resultitemsContainer.appendChild(newItem);
+    console.log(pillsContainer);
+    item.editions.forEach((edition) => {
+        thisCount++;
+        createEditionPill(edition, pillsContainer);
+    });
+    count.textContent = thisCount;
 };
 const setSearchStartCards = () => {
     db.editoriales[0].items[0].editions[0];
@@ -220,27 +251,52 @@ setSearchStartCards();
 
 searchBtn.addEventListener("click", (e) => {
     e.preventDefault();
-    const searchText = sanitizeInput(searchInput.value);
-    console.log(searchText);
-    resetWindows();
-    windowActions("window", "false", "search");
-    searchBtn.setAttribute("btn-active", "true");
-    const dataSearchEdition = "";
-    const searchData = [];
-    const searchRef = (ref) => {
-        const exist = ref.name.toLowerCase().includes(searchText) ? "Existe" : "No existe";
-        console.log(`${ref.name} ${exist}`);
-    };
-    db.editoriales.forEach((editorial) => {
-        searchRef(editorial);
-        editorial.items.forEach((item) => {
-            searchRef(item);
+    const searchText = sanitizeInput(searchInput.value.toLowerCase().trim());
+    if (!searchText || searchText === "") {
+        dialogWindow.setAttribute("accent", "bad");
+        selector("[dialog-ref='title']").textContent = "Busqueda Vacia";
+        selector("[dialog-ref='description']").textContent = "Necesitas mínimo 3 caracteres para recibir respuestas de búsqueda";
+        dialogWindow.showModal();
+    } else if (searchText.length <= 2) {
+        dialogWindow.setAttribute("accent", "bad");
+        selector("[dialog-ref='title']").textContent = "Menos del mínimo";
+        selector("[dialog-ref='description']").textContent = "Necesitas mínimo 3 caracteres para recibir respuestas de búsqueda";
+        dialogWindow.showModal();
+    } else {
+        console.log(searchText);
+        resetWindows();
+        windowActions("window", "false", "search");
+        searchBtn.setAttribute("btn-active", "true");
+        let itemsCount = 0;
+        let editionsCount = 0;
+        searchInput.value = null;
+        deleteChildElements(resultEditionsContainer);
+        deleteChildElements(resultitemsContainer);
+
+        db.editoriales.forEach((editorial) => {
+            editorial.items.forEach((item) => {
+                if (item.name.toLowerCase().includes(searchText)) {
+                    createItemCard(item);
+                    itemsCount++;
+                }
+            });
+            editorial.items.forEach((item) => {
+                item.editions.forEach((edition) => {
+                    if (edition.description.toLowerCase().includes(searchText)) {
+                        console.log(searchText, edition.description.toLowerCase());
+                        createEditionCard(edition, item.name);
+                        editionsCount++;
+                    }
+                });
+            });
         });
-    });
-    const dataSearchItem = "";
-    const dataSearchEditorial = "";
-    searchInput.value = null;
+
+        selector('[count="items"]', selector("[submenu-btn='results_items']")).textContent = itemsCount;
+        selector('[count="editions"]', selector("[submenu-btn='results_editions']")).textContent = editionsCount;
+    }
 });
 
-/* dialogWindow.showModal(); */
 themeBtn.addEventListener("click", changeTheme);
+selector("[close-modal-btn]").addEventListener("click", () => {
+    selector(`[close-modal-window]`).close();
+});

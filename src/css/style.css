@@ -16,7 +16,7 @@
 [color-scheme=dark] {
   --bg: var(--black);
   --tc: var(--white_off);
-  --bg_t: rgba(34, 34, 34, 0.6);
+  --bg_t: rgba(34, 34, 34, 0.8);
   --text_color: var(--white_off);
   --text_color_contrast: var(--black_off);
 }
@@ -138,6 +138,35 @@ OPTION:hover {
   font-size: 2rem;
 }
 
+[submenu-btn] {
+  position: relative;
+}
+[submenu-btn] [count] {
+  position: absolute;
+  bottom: -2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color_base);
+  color: var(--white_off);
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 2rem;
+  border-radius: var(--br);
+}
+
+.basic_btn {
+  border-radius: var(--br);
+  background: var(--bg_t);
+  padding: 0.5rem 2rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
 .nav {
   position: fixed;
   top: 0;
@@ -181,7 +210,7 @@ OPTION:hover {
   align-items: center;
   gap: 0.25rem;
   position: absolute;
-  top: calc(100% + 2rem);
+  top: calc(100% + 1rem);
 }
 
 .icon_container {
@@ -258,18 +287,18 @@ OPTION:hover {
   color: var(--color_base);
 }
 
-.edition_card {
+[pill] {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
-  max-width: 30rem;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  max-width: 10rem;
 }
-.edition_card IMG {
-  max-width: 15rem;
+[pill] IMG {
+  max-width: 9rem;
   border-radius: var(--br);
 }
-.edition_card .card_content {
+[pill] .pill_content {
   height: 100%;
   padding: 1rem;
   display: flex;
@@ -278,10 +307,31 @@ OPTION:hover {
   align-items: center;
   gap: 0.5rem;
 }
-.edition_card .card_content .editorial_image {
+
+[card] {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 30rem;
+}
+[card] IMG {
+  max-width: 15rem;
+  border-radius: var(--br);
+}
+[card] .card_content {
+  height: 100%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+[card] .card_content .editorial_image {
   width: 100%;
 }
-.edition_card .card_content .editorial_image IMG {
+[card] .card_content .editorial_image IMG {
   float: right;
   height: 2rem;
 }
@@ -307,6 +357,19 @@ OPTION:hover {
   width: 100%;
 }
 
+.content {
+  padding: 1rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.content h1 {
+  width: 100%;
+  text-align: center;
+}
+
 DIALOG {
   top: 8rem;
   left: 50%;
@@ -315,10 +378,12 @@ DIALOG {
   border-radius: var(--br);
   background: var(--bg_t);
   padding: 0.5rem 1rem;
+  width: 95%;
+  max-width: 600px;
 }
 
 dialog::backdrop {
-  background-color: var(--bg);
+  background-color: var(--bg_t);
   width: 100%;
   height: 100%;
   top: 0;
@@ -406,4 +471,39 @@ SPAN {
 
 [btn-active=false] {
   background: var(--bg);
+}
+
+[accent=bad] {
+  border: crimson 2px solid;
+  background: rgba(245, 33, 75, 0.4);
+}
+
+[accent=bad] {
+  --btnBG: hsl(0, 100%, 67%, 0.7);
+  --btnText: hsl(0, 100%, 67%);
+  --btnBorder: solid 1px hsl(0, 100%, 67%);
+}
+
+[accent=good] {
+  --btnBG: hsl(166, 100%, 37%, 0.7);
+  --btnText: hsl(166, 100%, 37%);
+  --btnBorder: solid 1px hsl(166, 100%, 37%);
+}
+
+[accent=warning] {
+  --btnBG: hsl(43, 100%, 51%, 0.7);
+  --btnText: hsl(43, 100%, 51%);
+  --btnBorder: solid 1px hsl(43, 100%, 51%);
+}
+
+[accent=basic] {
+  --btnBG: hsl(192, 70%, 43%, 0.7);
+  --btnText: hsl(192, 70%, 43%);
+  --btnBorder: solid 1px hsl(192, 70%, 43%);
+}
+
+[accent] {
+  border: var(--btnBorder);
+  background: var(--btnBG);
+  color: var(--btnText);
 }
