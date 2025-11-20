@@ -104,12 +104,19 @@
             </div>
         </dialog>
         <main>
-            <section class="window" selector="window_editorials" window="editorials" show="false" visible="false">
-                <div class="section_content"></div>
-            </section>
             <section class="window" selector="window_scan" window="scan" show="false" visible="false">
                 <div class="section_content">
                     <span class="reader" id="reader"></span>
+                </div>
+            </section>
+            <section class="window" selector="window_editorials" window="editorials" show="false" visible="false">
+                <div class="section_content"></div>
+            </section>
+            <section class="window" selector="window_item" window="item" show="false" visible="false">
+                <div class="section_content">
+                    <h1 class="item_name name" selector="name">Nombre Provicional</h1>
+                    <span selector="count">0</span>
+                    <ul class="cards_container" cards-container="item_editions"></ul>
                 </div>
             </section>
             <section class="window" selector="window_search" window="search" show="true" visible="true">
@@ -126,26 +133,20 @@
                     </ul>
                 </div>
             </section>
-            <section class="window" selector="window_user" window="user" show="false" visible="false">
+
+            <section class="window" selector="window_edition" window="edition" show="false" visible="false">
                 <div class="section_content">
-                    <span class="img_holder">
-                        <img src="./src/img/no_img.jpg" />
-                    </span>
-                    <h1>Nombre Falso</h1>
-                    <h2>Status</h2>
-                </div>
-            </section>
-            <section class="window" selector="window_results" window="results" show="false" visible="false">
-                <div class="section_content">
-                    <div class="img_container" selector="img_container">
-                        <img src="./src/img/no_img.jpg" class="img_result" selector="img_result" result="image" />
-                    </div>
-                    <p selector="name_result" result="name">Titulos Provicional</p>
-                    <h1 selector="description_result" result="description">Descripción Provicional</h1>
-                    <h2>Ed: <span selector="ed_result" result="edition">15</span></h2>
-                    <div class="sub_data">
-                        <h3>Editorial: <span selector="editorial_result" result="editorial">Salvat</span></h3>
-                        <h3>Codigo: <span selector="code_result" result="code">79823475623</span></h3>
+                    <div class="edition_result" selector="edition_result">
+                        <div class="img_container" selector="img_container">
+                            <img src="./src/img/no_img.jpg" class="img_result" selector="img_result" result="image" />
+                        </div>
+                        <h1 selector="name_result" result="name">Titulos Provicional</h1>
+                        <h2 selector="description_result" result="description">Descripción Provicional</h2>
+                        <h3>Ed: <span selector="ed_result" result="edition">15</span></h3>
+                        <div class="sub_data">
+                            <h3>Editorial: <span selector="editorial_result" result="editorial">Salvat</span></h3>
+                            <h3>Codigo: <span selector="code_result" result="code">79823475623</span></h3>
+                        </div>
                     </div>
 
                     <table class="inventario">
@@ -186,9 +187,19 @@
                     </table>
                 </div>
             </section>
+
             <section class="window" selector="window_add" window="add" show="false" visible="false">
                 <div class="section_content">
                     <hi> Add </hi>
+                </div>
+            </section>
+            <section class="window" selector="window_user" window="user" show="false" visible="false">
+                <div class="section_content">
+                    <span class="img_holder">
+                        <img src="./src/img/no_img.jpg" />
+                    </span>
+                    <h1>Nombre Falso</h1>
+                    <h2>Status</h2>
                 </div>
             </section>
         </main>
@@ -198,6 +209,20 @@
     </template>
     <template template-ref="edition_card">
         <li class="card edition_card" card="edition">
+            <button type="button" class="save_btn" action="save_edition" edition-id="">
+                <span class="icon_container" show="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path
+                            d="M12.001 4.52853C14.35 2.42 17.98 2.49 20.2426 4.75736C22.5053 7.02472 22.583 10.637 20.4786 12.993L11.9999 21.485L3.52138 12.993C1.41705 10.637 1.49571 7.01901 3.75736 4.75736C6.02157 2.49315 9.64519 2.41687 12.001 4.52853ZM18.827 6.1701C17.3279 4.66794 14.9076 4.60701 13.337 6.01687L12.0019 7.21524L10.6661 6.01781C9.09098 4.60597 6.67506 4.66808 5.17157 6.17157C3.68183 7.66131 3.60704 10.0473 4.97993 11.6232L11.9999 18.6543L19.0201 11.6232C20.3935 10.0467 20.319 7.66525 18.827 6.1701Z"
+                        ></path>
+                    </svg>
+                </span>
+                <span class="icon_container" show="false">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M12.001 4.52853C14.35 2.42 17.98 2.49 20.2426 4.75736C22.5053 7.02472 22.583 10.637 20.4786 12.993L11.9999 21.485L3.52138 12.993C1.41705 10.637 1.49571 7.01901 3.75736 4.75736C6.02157 2.49315 9.64519 2.41687 12.001 4.52853Z"></path>
+                    </svg>
+                </span>
+            </button>
             <img src="/src/" selector="image" />
             <div class="card_content">
                 <span class="editorial_image"><img src="./src/img/Logo ollamani.jpg" selector="editorial_image" /></span>
@@ -205,15 +230,16 @@
                 <p class="description">Descripción: <span selector="description"></span></p>
                 <h2 class="ed">Ed: <span selector="edition"></span></h2>
                 <p class="code">Codigo: <span class="" selector="code">77812873478</span></p>
-                <button type="button" class="btn" btn-ref="">Abrir Contenido</button>
+                <button type="button" class="btn" show="edition">Abrir Contenido</button>
             </div>
         </li>
     </template>
     <template template-ref="item_card">
-        <li class="card item_card" card="item">
+        <li class="card item_card" card="item" item="">
             <h1 class="item_name name" selector="name">Nombre Provicional</h1>
             <span selector="count">0</span>
             <ul class="pills_container"></ul>
+            <button type="button" class="btn" show="item">Abrir Contenido</button>
         </li>
     </template>
     <template template-ref="edition_pill">
@@ -222,6 +248,7 @@
             <div class="pill_content">
                 <h1 class="pill_name name" selector="name">Nombre Provicional</h1>
                 <h2 class="ed">Ed: <span selector="edition"></span></h2>
+                <button type="button" class="btn" show="eition">Abrir Contenido</button>
             </div>
         </li>
     </template>

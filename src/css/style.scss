@@ -233,19 +233,54 @@ OPTION {
     }
 }
 .card {
-    width: 100%;
-    height: 20rem;
     border-radius: var(--br);
     overflow: hidden;
     background: var(--bg_t);
+    width: 100%;
+    max-width: 30rem;
     H2,
     p {
         SPAN {
             color: var(--color_base);
         }
     }
+
+    IMG {
+        max-width: 15rem;
+        border-radius: var(--br);
+    }
+    .card_content {
+        height: 100%;
+        padding: 1rem;
+        @include flex(column, space-between, center);
+        gap: 0.5rem;
+        .editorial_image {
+            width: 100%;
+            IMG {
+                float: right;
+                height: 2rem;
+            }
+        }
+    }
 }
-[pill] {
+.edition_card {
+    @include flex(row, space-between, flex-start);
+    position: relative;
+    height: 22rem;
+    .save_btn {
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        SVG {
+            fill: var(--white_off);
+        }
+    }
+}
+.pills_container {
+    @include flexCenter();
+    gap: 0.5rem;
+}
+.pill {
     @include flex(column, flex-start, center);
     max-width: 10rem;
     IMG {
@@ -259,27 +294,16 @@ OPTION {
         gap: 0.5rem;
     }
 }
-[card] {
-    @include flex(row, space-between, flex-start);
-    max-width: 30rem;
-    IMG {
-        max-width: 15rem;
-        border-radius: var(--br);
-    }
-    .card_content {
-        height: 100%;
-        padding: 1rem;
-        @include flex(column, center, center);
-        gap: 0.5rem;
-        .editorial_image {
-            width: 100%;
-            IMG {
-                float: right;
-                height: 2rem;
-            }
-        }
+.edition_result {
+    width: 100%;
+    max-width: 40rem;
+    @include flexCenter();
+    flex-direction: column;
+    h2 {
+        color: var(--color_base);
     }
 }
+
 .btn {
     width: 100%;
     padding: 1rem;

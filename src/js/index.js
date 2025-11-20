@@ -73,12 +73,15 @@ const resetSubwindows = () => {
         subwindow.setAttribute("visible", "false");
     });
 };
+const showItemData = (item) => {
+    console.log(item);
+};
 const showEditionData = (edito, itemName, data) => {
     if (html5QrCode.isScanning === true) {
         html5QrCode.stop();
     }
     resetWindows();
-    const resultWindow = selector('[window="results"]');
+    const resultWindow = selector('[window="edition"]');
     resultWindow.setAttribute("show", "true");
     setTimeout(() => {
         resultWindow.setAttribute("visible", "true");
@@ -126,8 +129,9 @@ const changeTheme = () => {
 };
 
 const windowActions = (target, state, container) => {
+    console.log(target, state, container);
     const targetWindow = selector(`[${target}="${container}"]`);
-
+    console.log(targetWindow);
     switch (state) {
         case "true":
             targetWindow.setAttribute("visible", "false");
@@ -217,28 +221,43 @@ const createEditionPill = (ed, container) => {
     const name = selector('[selector="name"]', newEdition);
     const edition = selector('[selector="edition"]', newEdition);
     const image = selector('[selector="image"]', newEdition);
+    const button = selector("button", newEdition);
     image.src = ed.image === "" ? noImgLink : ed.image;
 
     console.log(ed);
     name.textContent = ed.description;
     edition.textContent = ed.edition;
     container.appendChild(newEdition);
+    button.addEventListener("click", () => {
+        resetWindows();
+
+        windowActions("window", "false", target);
+    });
 };
 const createItemCard = (item) => {
     const newItem = itemCardTemplate.cloneNode(true);
-    const card = selector('[selector="card"]', newItem);
+    const card = selector("[card]", newItem);
     const count = selector('[selector="count"]', newItem);
     const name = selector('[selector="name"]', newItem);
     const pillsContainer = selector(".pills_container", newItem);
+    const button = selector("button", newItem);
     name.textContent = item.name;
     let thisCount = 0;
     resultitemsContainer.appendChild(newItem);
     console.log(pillsContainer);
+    for (let count = 0; count <= 2; count++) {
+        createEditionPill(item.editions[count], pillsContainer, item);
+    }
     item.editions.forEach((edition) => {
         thisCount++;
-        createEditionPill(edition, pillsContainer);
     });
     count.textContent = thisCount;
+    button.addEventListener("click", () => {
+        resetWindows();
+        const target = button.getAttribute("show");
+        windowActions("window", "false", target);
+        showItemData(item);
+    });
 };
 const setSearchStartCards = () => {
     db.editoriales[0].items[0].editions[0];
