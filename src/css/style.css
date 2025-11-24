@@ -535,3 +535,9 @@ SPAN {
   background: var(--btnBG);
   color: var(--btnText);
 }
+
+.reader {
+  width: 100%;
+  max-width: 900px;
+  height: 900px;
+}/*# sourceMappingURL=style.css.map */

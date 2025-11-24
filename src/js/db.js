@@ -116,7 +116,7 @@ export const db = {
                     ],
                 },
                 {
-                    name: "Mustag GT 1968",
+                    name: "Mustang GT 1968",
                     cover: "",
                     editions: [
                         {
