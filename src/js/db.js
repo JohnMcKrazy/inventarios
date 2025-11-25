@@ -177,7 +177,7 @@ export const db = {
             id: "srhuysdtadruhj",
         },
         {
-            name: "Planeta de Agostini",
+            name: "Planeta deAgostini",
             items: [
                 {
                     name: "Formula RedBull RB19",
@@ -231,6 +231,47 @@ export const db = {
                             code: "4",
                             edition: "4",
                             id: "r5tuwuio",
+                        },
+                    ],
+                },
+                {
+                    name: "Naves Star Wars",
+                    cover: "",
+                    editions: [
+                        {
+                            description: "Naboo N-1 Starfighter",
+                            image: "https://cdn.deagostini.com/dea/live/media/entrega-011p46021-naves-vehiculos-starwars-entrega-21a-caza-naboo-1669574206182-cloned-at1726247446940-1.jpg",
+                            code: "7509997821641",
+                            edition: "21",
+                            id: "ghfukdfhfhj",
+                        },
+                        {
+                            description: "Poe Dameron's X-wing",
+                            image: "https://cdn.deagostini.com/dea/live/media/entrega-011p46003-nave-03-1623157232024-cloned-at1703084824080-3.jpg",
+                            code: "",
+                            edition: "3",
+                            id: "drftykjgjo",
+                        },
+                        {
+                            description: "Boba Fett's Starfighter",
+                            image: "https://cdn.deagostini.com/dea/live/media/entrega-011p46008-naves-vehiculos-starwars-entrega-8a-caza-boba-fett-1635760355355-cloned-at1704881027954-3.jpg",
+                            code: "7509997809007",
+                            edition: "8",
+                            id: "opiusdtg",
+                        },
+                        {
+                            description: "AT-M6",
+                            image: "https://cdn.deagostini.com/dea/live/media/entrega-011p46025-naves-vehiculos-starwars-entrega-25a-at-m6-1673078628216-cloned-at1726247447103-1.jpg",
+                            code: "7509997825601",
+                            edition: "25",
+                            id: "sjtgJFG",
+                        },
+                        {
+                            description: "Tie Interceptor",
+                            image: "https://cdn.deagostini.com/dea/live/media/entrega-011p46024-naves-vehiculos-starwars-entrega-24a-caza-tie-1673078462649-cloned-at1726247447060-1.jpg",
+                            code: "7509997824536",
+                            edition: "24",
+                            id: "hyugjdfhyhu",
                         },
                     ],
                 },
