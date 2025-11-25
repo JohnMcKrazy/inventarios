@@ -79,7 +79,7 @@ const resetSubwindows = () => {
         subwindow.setAttribute("visible", "false");
     });
 };
-const showItemData = (item) => {
+const showItemData = (editorialName, item) => {
     console.log(item);
     const windowTarget = selector('[window="item"]');
     const cardsContainer = selector("[cards-container='item_editions']");
@@ -90,14 +90,11 @@ const showItemData = (item) => {
     item.editions.forEach((edition) => {
         count++;
         console.log(edition);
-        createEditionCard(edition, item.name, cardsContainer);
+        createEditionCard(editorialName, edition, item.name, cardsContainer);
     });
     counter.textContent = count;
 };
-const showEditionData = (itemName, data) => {
-    if (html5QrCode.isScanning === true) {
-        html5QrCode.stop();
-    }
+const showEditionData = (editorialName, itemName, data) => {
     resetWindows();
     const resultWindow = selector('[window="edition"]');
     resultWindow.setAttribute("show", "true");
@@ -108,12 +105,14 @@ const showEditionData = (itemName, data) => {
     const description = selector('[result="description"]');
     const image = selector('[result="image"]');
     const edition = selector('[result="edition"]');
+    const editorial = selector('[result="editorial"]');
     const code = selector('[result="code"]');
     name.textContent = itemName;
     description.textContent = data.description;
     edition.textContent = data.edition;
     code.textContent = data.code;
     image.src = data.image;
+    editorial.textContent = editorialName;
 };
 const onScanSuccess = (decodedText, decodedResult) => {
     console.log(decodedText);
@@ -126,7 +125,7 @@ const onScanSuccess = (decodedText, decodedResult) => {
             item.editions.forEach((edition) => {
                 if (edition.code === decodedText) {
                     console.log(edition);
-                    showEditionData(item.name, edition);
+                    showEditionData(editorial.name, item.name, edition);
                     console.log(edition.code, decodedText);
                     console.log(edition);
                     console.log("existe");
@@ -216,7 +215,7 @@ menuActionBtns.forEach((menuActionBtn) => {
     });
 });
 
-const createEditionCard = (data, itemName, container) => {
+const createEditionCard = (editorialName, data, itemName, container) => {
     /* console.log(data); */
     const newEdition = editionCardTemplate.cloneNode(true);
     const card = selector('[selector="card"]', newEdition);
@@ -236,11 +235,11 @@ const createEditionCard = (data, itemName, container) => {
     container.appendChild(newEdition);
     btn.addEventListener("click", () => {
         console.log("click edition");
-        showEditionData(itemName, data);
+        showEditionData(editorialName, itemName, data);
     });
 };
 
-const createItemCard = (item) => {
+const createItemCard = (editorialName, item) => {
     const createEditionPill = (ed, container) => {
         const newEdition = editionPillTemplate.cloneNode(true);
         const name = selector('[selector="name"]', newEdition);
@@ -282,7 +281,7 @@ const createItemCard = (item) => {
         resetWindows();
         const target = button.getAttribute("show");
         windowActions("window", "false", target);
-        showItemData(item);
+        showItemData(editorialName, item);
     });
 };
 const setSearchStartCards = () => {
@@ -321,7 +320,7 @@ searchBtn.addEventListener("click", (e) => {
         db.editoriales.forEach((editorial) => {
             editorial.items.forEach((item) => {
                 if (item.name.toLowerCase().includes(searchText)) {
-                    createItemCard(item);
+                    createItemCard(editorial.name, item);
                     itemsCount++;
                 }
             });
@@ -330,7 +329,7 @@ searchBtn.addEventListener("click", (e) => {
                     if (edition.description.toLowerCase().includes(searchText)) {
                         console.log(searchText, edition.description.toLowerCase());
 
-                        showEditionData(item.name, edition);
+                        createEditionCard(editorial.name, edition, item.name, resultEditionsContainer);
                         editionsCount++;
                     }
                 });
