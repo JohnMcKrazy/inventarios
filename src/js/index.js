@@ -131,6 +131,7 @@ const onScanSuccess = (decodedText, decodedResult) => {
                     console.log("existe");
                 } else {
                     console.log("existe");
+                    showEditionData("No Definido", "Indifinido", noEditionData);
                 }
             });
         });
