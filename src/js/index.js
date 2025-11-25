@@ -25,11 +25,11 @@ const searchBtn = selector("[search-btn]");
 
 const noImgLink = "./src/img/no_img.jpg";
 const noEditionData = {
-    name: "Indefinida",
-    edition: "Indefinida",
+    edition: "indefinido",
     image: noImgLink,
-    description: "Indefinida",
+    description: "Sin Descripcion",
     code: "000000",
+    id: "indefinido",
 };
 const html5QrCode = new Html5Qrcode("reader");
 
@@ -117,7 +117,7 @@ const showEditionData = (editorialName, itemName, data) => {
 const onScanSuccess = (decodedText, decodedResult) => {
     console.log(decodedText);
 
-    let itemSearched;
+    let codeMatch = false;
     /* selector("selector='scan_'").textContent = `${decodedText}`; */
     console.log(`Code matched = ${decodedText}`, decodedResult);
     db.editoriales.forEach((editorial) => {
@@ -129,13 +129,17 @@ const onScanSuccess = (decodedText, decodedResult) => {
                     console.log(edition.code, decodedText);
                     console.log(edition);
                     console.log("existe");
-                } else {
-                    console.log("existe");
-                    showEditionData("No Definido", "Indifinido", noEditionData);
+                    codeMatch = true;
                 }
             });
         });
     });
+    if (codeMatch === false) {
+        noEditionData.code = decodedText;
+
+        console.log("existe");
+        showEditionData("Indefinido", "Item No Encontrado", noEditionData);
+    }
 };
 
 const changeTheme = () => {
