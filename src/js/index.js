@@ -226,14 +226,12 @@ const createEditionCard = (editorialName, data, itemName, container) => {
     const card = selector('[selector="card"]', newEdition);
     const edition = selector('[selector="edition"]', newEdition);
     const code = selector('[selector="code"]', newEdition);
-    const name = selector('[selector="name"]', newEdition);
     const description = selector('[selector="description"]', newEdition);
     const image = selector('[selector="image"]', newEdition);
     const btn = selector(".btn", newEdition);
     const editorialImage = selector('[selector="editorial_image"]', newEdition);
     code.textContent = data.code;
     edition.textContent = data.edition;
-    name.textContent = itemName;
     description.textContent = data.description;
     /* console.log(data.image); */
     image.src = data.image === "" ? noImgLink : data.image;
@@ -247,14 +245,12 @@ const createEditionCard = (editorialName, data, itemName, container) => {
 const createItemCard = (editorialName, item) => {
     const createEditionPill = (ed, container) => {
         const newEdition = editionPillTemplate.cloneNode(true);
-        const name = selector('[selector="name"]', newEdition);
         const edition = selector('[selector="edition"]', newEdition);
         const image = selector('[selector="image"]', newEdition);
 
         console.log(ed);
         image.src = ed.image === "" ? noImgLink : ed.image;
 
-        name.textContent = ed.description;
         edition.textContent = ed.edition;
         container.appendChild(newEdition);
     };
@@ -350,3 +346,32 @@ themeBtn.addEventListener("click", changeTheme);
 selector("[close-modal-btn]").addEventListener("click", () => {
     selector(`[close-modal-window]`).close();
 });
+
+/* GENERADOR DE CODIGOS */
+/* 
+const creatorID=(long)=> {
+  const caracteres = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()';
+  let id = '';
+  // Se genera un ID hasta que sea único y la long sea la solicitada
+  do {
+    id = '';
+    for (let i = 0; i < long; i++) {
+      // Se genera un carácter aleatorio de los caracteres disponibles
+      const indiceAleatorio = Math.floor(Math.random() * caracteres.length);
+      id += caracteres.charAt(indiceAleatorio);
+    }
+  } while (idsGenerados.includes(id)); // Verifica si el ID ya existe
+  db.editoriales.forEach(editorial=>{
+    editorial.items_id
+  })
+  idsGenerados.push(id); // Agrega el ID a la lista de IDs generados
+  return id;
+}
+
+// Es necesario mantener una lista de IDs generados para verificar la unicidad
+
+
+// Ejemplo de uso:
+const nuevoId = generarIdUnico(12); // Genera un ID de 12 caracteres
+console.log(nuevoId); 
+ */

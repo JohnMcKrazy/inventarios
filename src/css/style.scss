@@ -212,13 +212,7 @@ OPTION {
         background: none;
     }
 }
-.cards_container {
-    @include flex(row, center, flex-start);
-    flex-wrap: wrap;
-    gap: 1rem;
-    width: 100%;
-    padding-top: 2rem;
-}
+
 .img_holder {
     position: relative;
     border-radius: 50%;
@@ -238,8 +232,10 @@ OPTION {
     background: var(--bg_t);
     width: 100%;
     max-width: 30rem;
+    padding: 1rem 2rem;
     H2,
     p {
+        text-align: center;
         SPAN {
             color: var(--color_base);
         }
@@ -251,7 +247,7 @@ OPTION {
     }
     .card_content {
         height: 100%;
-        padding: 1rem;
+        padding: 0 0 0 1rem;
         @include flex(column, space-between, center);
         gap: 0.5rem;
         .editorial_image {
@@ -262,6 +258,7 @@ OPTION {
             }
         }
     }
+    height: fit-content;
 }
 .edition_card {
     @include flex(row, space-between, flex-start);
@@ -277,7 +274,7 @@ OPTION {
     }
 }
 .pills_container {
-    @include flexCenter();
+    @include flex(row, center, flex-start);
     gap: 0.5rem;
 }
 .pill {
@@ -328,6 +325,13 @@ OPTION {
         width: 100%;
         text-align: center;
     }
+}
+.cards_container {
+    @include flex(row, center, flex-start);
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 100%;
+    padding-top: 2rem;
 }
 DIALOG {
     top: 8rem;

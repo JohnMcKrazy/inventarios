@@ -140,8 +140,8 @@
                         <div class="img_container" selector="img_container">
                             <img src="./src/img/no_img.jpg" class="img_result" selector="img_result" result="image" />
                         </div>
-                        <h1 selector="name_result" result="name">Titulos Provicional</h1>
-                        <h2 selector="description_result" result="description">Descripción Provicional</h2>
+                        <h1 selector="description_result" result="description">Descripción Provicional</h1>
+                        <h2 selector="name_result" result="name">Titulos Provicional</h2>
                         <h3>Ed: <span selector="ed_result" result="edition">15</span></h3>
                         <div class="sub_data">
                             <h3>Editorial: <span selector="editorial_result" result="editorial">Salvat</span></h3>
@@ -226,8 +226,7 @@
             <img src="/src/" selector="image" />
             <div class="card_content">
                 <span class="editorial_image"><img src="./src/img/Logo ollamani.jpg" selector="editorial_image" /></span>
-                <h1 class="name" selector="name">Nombre Provicional</h1>
-                <p class="description">Descripción: <span selector="description"></span></p>
+                <h1 class="description" selector="description"></h1>
                 <h2 class="ed">Ed: <span selector="edition"></span></h2>
                 <p class="code">Codigo: <span class="" selector="code">77812873478</span></p>
                 <button type="button" class="btn" show="edition">Abrir Contenido</button>
@@ -237,7 +236,7 @@
     <template template-ref="item_card">
         <li class="card item_card" card="item" item="">
             <h1 class="item_name name" selector="name">Nombre Provicional</h1>
-            <span selector="count">0</span>
+            <h2 class="item_count">Ediciones: <span selector="count">0</span></h2>
             <ul class="pills_container"></ul>
             <button type="button" class="btn" show="item">Abrir Contenido</button>
         </li>
@@ -246,7 +245,6 @@
         <li class="pill edition_pill" pill="edition">
             <img src="/src/" selector="image" />
             <div class="pill_content">
-                <h1 class="pill_name name" selector="name">Nombre Provicional</h1>
                 <h2 class="ed">Ed: <span selector="edition"></span></h2>
             </div>
         </li>
