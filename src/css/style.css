@@ -499,10 +499,6 @@ SPAN {
 .reader {
   width: 100%;
 }
-.reader VIDEO {
-  width: 100%;
-  height: auto;
-}
 
 [btn-active=true] {
   background: var(--color_base);
@@ -545,4 +541,4 @@ SPAN {
   border: var(--btnBorder);
   background: var(--btnBG);
   color: var(--btnText);
-}/*# sourceMappingURL=style.css.map */
+}
