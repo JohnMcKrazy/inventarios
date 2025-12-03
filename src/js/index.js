@@ -123,7 +123,7 @@ const onScanSuccess = (decodedText, decodedResult) => {
     db.editoriales.forEach((editorial) => {
         editorial.items.forEach((item) => {
             item.editions.forEach((edition) => {
-                if (edition.code === decodedText) {
+                if (edition.code.toString() === decodedText.toString()) {
                     console.log(edition);
                     showEditionData(editorial.name, item.name, edition);
                     console.log(edition.code, decodedText);
