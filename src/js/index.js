@@ -320,6 +320,7 @@ searchBtn.addEventListener("click", (e) => {
 
         db.editoriales.forEach((editorial) => {
             editorial.items.forEach((item) => {
+                console.log(item);
                 if (item.name.toLowerCase().includes(searchText)) {
                     createItemCard(editorial.name, item);
                     itemsCount++;

@@ -109,15 +109,6 @@ BUTTON {
   cursor: pointer;
 }
 
-SVG {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  fill: var(--tc);
-}
-
 SELECT {
   background: var(--bg_t);
   border: solid var(--text_color) 1px;
@@ -220,6 +211,14 @@ OPTION:hover {
   justify-content: center;
   align-items: center;
   padding: 0.5rem;
+}
+.icon_container SVG {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  fill: var(--tc);
 }
 
 .window {
