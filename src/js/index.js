@@ -337,7 +337,12 @@ searchBtn.addEventListener("click", (e) => {
                 });
             });
         });
-
+        if (itemsCount === 0 && editionsCount === 0) {
+            dialogWindow.setAttribute("accent", "bad");
+            selector("[dialog-ref='title']").textContent = "No Existe";
+            selector("[dialog-ref='description']").textContent = "No se encuentra nada con ese nombre o descripción";
+            dialogWindow.showModal();
+        }
         selector('[count="items"]', selector("[submenu-btn='results_items']")).textContent = itemsCount;
         selector('[count="editions"]', selector("[submenu-btn='results_editions']")).textContent = editionsCount;
     }
