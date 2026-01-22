@@ -293,20 +293,19 @@ const setSearchStartCards = () => {
     showEditionData(item.name, edition);
 };
 /* setSearchStartCards(); */
-
+const setModal = (status, title, description) => {
+    dialogWindow.setAttribute("accent", status);
+    selector("[dialog-ref='title']").textContent = title;
+    selector("[dialog-ref='description']").textContent = description;
+    dialogWindow.showModal();
+};
 searchBtn.addEventListener("click", (e) => {
     e.preventDefault();
     const searchText = sanitizeInput(searchInput.value.toLowerCase().trim());
     if (!searchText || searchText === "") {
-        dialogWindow.setAttribute("accent", "bad");
-        selector("[dialog-ref='title']").textContent = "Busqueda Vacia";
-        selector("[dialog-ref='description']").textContent = "Necesitas mínimo 3 caracteres para recibir respuestas de búsqueda";
-        dialogWindow.showModal();
+        setModal("bad", "Busqueda Vacia", "Necesitas mínimo 3 caracteres para recibir respuestas de búsqueda");
     } else if (searchText.length <= 2) {
-        dialogWindow.setAttribute("accent", "bad");
-        selector("[dialog-ref='title']").textContent = "Menos del mínimo";
-        selector("[dialog-ref='description']").textContent = "Necesitas mínimo 3 caracteres para recibir respuestas de búsqueda";
-        dialogWindow.showModal();
+        setModal("bad", "Menos del mínimo", "Necesitas mínimo 3 caracteres para recibir respuestas de búsqueda");
     } else {
         console.log(searchText);
         resetWindows();
@@ -338,10 +337,7 @@ searchBtn.addEventListener("click", (e) => {
             });
         });
         if (itemsCount === 0 && editionsCount === 0) {
-            dialogWindow.setAttribute("accent", "bad");
-            selector("[dialog-ref='title']").textContent = "No Existe";
-            selector("[dialog-ref='description']").textContent = "No se encuentra nada con ese nombre o descripción";
-            dialogWindow.showModal();
+            setModal("bad", "No Existe", "No se encuentra nada con ese nombre o descripción");
         }
         selector('[count="items"]', selector("[submenu-btn='results_items']")).textContent = itemsCount;
         selector('[count="editions"]', selector("[submenu-btn='results_editions']")).textContent = editionsCount;
