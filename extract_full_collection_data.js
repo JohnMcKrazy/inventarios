@@ -1,9 +1,12 @@
 const container = document.querySelector(".FiguresGridAutomatic");
+console.log(container);
+
 const slides = container ? container.querySelectorAll(".swiper-slide") : [];
 
 const collectionData = [];
 
 slides.forEach((slide) => {
+    console.log(slide);
     // 1. Obtiene el número de edición
     const uptitleElement = slide.querySelector(".uptitle");
 
@@ -58,7 +61,11 @@ const uniqueArray = collectionData.filter((obj, index, self) => index === self.f
 
 console.log(uniqueArray);
 
-console.log("Total de items encontrados:", collectionsSorted.length);
+/* console.log("Total de items encontrados:", collectionsSorted.length);
 console.log("Colección:", document.title);
-console.log(collectionsSorted);
-console.log(uniqueArray);
+console.log(collectionsSorted); */
+console.log({
+    name: `${document.title}`,
+    cover: "",
+    editions: uniqueArray,
+});
