@@ -1842,6 +1842,957 @@ export const db = {
             name: "Planeta deAgostini",
             items: [
                 {
+    "name": "Audiocuentos Disney - Infantil - Planeta deAgostini",
+    "cover": "",
+    "editions": [
+        {
+            "description": "El Rey León",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05001-fs1-audiocuentos-disney-entregas-1591348023077-cloned-at1640185526982-4.jpg",
+            "edition": "1",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "Bocina",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05002-2-audiocuentos-disneyes-1601035759912-cloned-at1640185527111-4.jpg",
+            "edition": "2",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "Buscando a Nemo",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05003-fs3-audiocuentos-disney-entregas-1591348065936-cloned-at1640185527135-4.jpg",
+            "edition": "3",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "Aladdin",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05004-fs4-audiocuentos-disney-entregas-1594879467021-cloned-at1640185527161-4.jpg",
+            "edition": "4",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "Dumbo",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05005-fs5-audiocuentos-disney-entregas-1594879426259-cloned-at1640185527189-4.jpg",
+            "edition": "5",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "Peter Pan",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05006-audiocuentos-disney-entrega-6-peter-pan-1602779925186-cloned-at1640185527218-4.jpg",
+            "edition": "6",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "Blanca Nieves",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05007-audiocuentos-disney-entrega-7-blancanieves-1602779939793-cloned-at1640185527245-4.jpg",
+            "edition": "7",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "Toy Story",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05008-audiocuentos-disney-entrega-8-toy-story-1602779965317-cloned-at1640185527271-4.jpg",
+            "edition": "8",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "La Sirenita",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05009-audiocuentos-disney-entrega-9-sirenita-1602779983960-cloned-at1640185527290-4.jpg",
+            "edition": "9",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "Pinocho",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05010-audiocuentos-disney-entrega-10-pinocho-1604395275596-cloned-at1640185527316-4.jpg",
+            "edition": "10",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "Frozen",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05011-audiocuentos-disney-entrega-11-frozen-1604395338184-cloned-at1640185527334-4.jpg",
+            "edition": "11",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "101 Dálmatas",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05012-audiocuentos-disney-entrega-12-dalmatas-1612164440358-cloned-at1640185527361-4.jpg",
+            "edition": "12",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "La bella y la bestia",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05013-audiocuentos-disney-entrega-13-bella-bestia-1612439451379-cloned-at1640185527419-4.jpg",
+            "edition": "13",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "Cars",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05014-audiocuentos-disney-entrega-14-cars-1612439505348-cloned-at1640185527504-4.jpg",
+            "edition": "14",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "Cenicienta",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05015-audiocuentos-disney-entrega-15-cenicienta-1612439573778-cloned-at1640185527546-4.jpg",
+            "edition": "15",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "Alicia en el país de las maravillas",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05016-audiocuentos-disney-entrega-16-alicia-1612439654085-cloned-at1640185527574-4.jpg",
+            "edition": "16",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "La dama y el vagabundo",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05017-audiocuentos-disney-entrega-17-dama-vagabundo-1612439730260-cloned-at1640185527598-4.jpg",
+            "edition": "17",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "Enredados",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05018-audiocuentos-disney-entrega-18-enredados-1612540992252-cloned-at1640185527641-4.jpg",
+            "edition": "18",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "Robin Hood",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05019-audiocuentos-disney-entrega-19-robin-hood-1612541046989-cloned-at1640185527676-4.jpg",
+            "edition": "19",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "Ratatouille",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05020-audiocuentos-disney-entrega-20-ratatouil-1612541116383-cloned-at1640185527709-4.jpg",
+            "edition": "20",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "Bambi",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05021-audiocuentos-disney-entrega-21-bambi-1612541154831-cloned-at1640185527729-4.jpg",
+            "edition": "21",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "Monstruos, S.A.",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05022-audiocuentos-disney-entrega-22-monsters-1614584006645-cloned-at1640185527769-4.jpg",
+            "edition": "22",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "La gran aventura de Winnie The Pooh",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05023-audiocuentos-disney-entrega-23-winnie-1614584087270-cloned-at1640185527792-4.jpg",
+            "edition": "23",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "Los Increíbles",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05024-audiocuentos-disney-entrega-24-invencibles-1623485270771-cloned-at1640185527824-4.jpg",
+            "edition": "24",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "La bella durmiente",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05025-audiocuentos-disney-entrega-25-bella-durmiente-1623485476380-cloned-at1640185527857-4.jpg",
+            "edition": "25",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "Los aristogatos",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05026-audiocuentos-disney-entrega-26-aristogatos-1623485645146-cloned-at1640185527878-4.jpg",
+            "edition": "26",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "Pocahontas",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05027-audiocuentos-disney-entrega-27-pocahontas-1623485758217-cloned-at1640185527931-4.jpg",
+            "edition": "27",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "Merlín el encantador",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05028-audiocuentos-disney-entrega-28-merlin-1633673819853-cloned-at1640185527962-4.jpg",
+            "edition": "28",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "Lilo y Stitch",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05029-audiocuentos-disney-entrega-29-lilo-stitch-1623486028266-cloned-at1640185527993-4.jpg",
+            "edition": "29",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "El jorobado de Notre Dame",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05030-audiocuentos-disney-entrega-30-jorobado-notre-dame-1633673882650-cloned-at1640185528024-4.jpg",
+            "edition": "30",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "Zootrópolis",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05031-audiocuentos-disney-entrega-31-zootropolis-1626687128818-cloned-at1640185528068-4.jpg",
+            "edition": "31",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "Los rescatadores",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05032-audiocuentos-disney-entrega-32-rescatadorers-1633673917708-cloned-at1640185528117-4.jpg",
+            "edition": "32",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "Del revés",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05033-audiocuentos-disney-entrega-33-delreves-1628674446134-cloned-at1640185528137-4.jpg",
+            "edition": "33",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "Mulán",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05034-audiocuentos-disney-entrega-34-mulan-1628674281893-cloned-at1640185528173-4.jpg",
+            "edition": "34",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "Coco",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05035-audiocuentos-disney-entrega-35-coco-1633673957234-cloned-at1640185528213-4.jpg",
+            "edition": "35",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "Bichos, una aventura en miniatura",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05036-audiocuentos-disney-entrega-36-bichos-1632682158598-cloned-at1640185528249-4.jpg",
+            "edition": "36",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "Hércules",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05037-audiocuentos-disney-entrega-37-hercules-1638125895200-cloned-at1640185528301-4.jpg",
+            "edition": "37",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "Vaiana",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05038-audiocuentos-disney-entrega-38-vaiana-1638125925251-cloned-at1640185528326-4.jpg",
+            "edition": "38",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "Tod y Toby",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05039-audiocuentos-disney-entrega-39-tod-toby-1638125957645-cloned-at1640185528368-4.jpg",
+            "edition": "39",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "Up",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05040-audiocuentos-disney-entrega-40-up-1638958255842-cloned-at1640185528407-4.jpg",
+            "edition": "40",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "La película de Tigger",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05041-audiocuentos-disney-entrega-41-tigger-1638958295789-cloned-at1640185528429-4.jpg",
+            "edition": "41",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "Tiana y el sapo",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05042-audiocuentos-disney-entrega-42-tiana-y-el-sapo-1638125995828-cloned-at1640185528455-4.jpg",
+            "edition": "42",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "Salvaje",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05043-audiocuentos-disney-entrega-43-salvaje-1638126042175-cloned-at1640185528503-4.jpg",
+            "edition": "43",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "Hermano oso",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05044-audiocuentos-disney-entrega-44-hermano-oso-1646050700237-cloned-at1695918784689-4.jpg",
+            "edition": "44",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "Rompe Ralph",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05045-audiocuentos-disney-entrega-45-rompe-ralph-1638126158568-cloned-at1640185528564-4.jpg",
+            "edition": "45",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "Frozen II",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05046-audiocuentos-disney-entrega-46-frozen-1638958382063-cloned-at1640185528585-4.jpg",
+            "edition": "46",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "Buscando a Dory",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05047-audiocuentos-disney-entrega-47-buscando-dory-1639375012796-cloned-at1640185528646-4.jpg",
+            "edition": "47",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "Basil, el ratón superdetective",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05048-audiocuentos-disney-entrega-48-basil-1639983476789-cloned-at1640185528669-4.jpg",
+            "edition": "48",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "BOLT",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-44mx46049-49-1692005430767-4.jpg",
+            "edition": "49",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "CARS 2",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-44mx46050-50-1692005544754-4.jpg",
+            "edition": "50",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "BRAVE",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-44mx46051-51-1692006476706-4.jpg",
+            "edition": "51",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "MONSTRUOS UNIVERSITY",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-44mx46052-52-1692005642358-4.jpg",
+            "edition": "52",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "ZAFARRANCHO EN EL RANCHO",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-44mx46053-53-1692005740010-4.jpg",
+            "edition": "53",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "TOY STORY 2",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-44mx46054-54-1692006195690-4.jpg",
+            "edition": "54",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "EL VIAJE DE ARLO",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-44mx46055-55-1692005834112-4.jpg",
+            "edition": "55",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "LOS INCREÍBLES 2",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-44mx46056-56-1692005928686-4.jpg",
+            "edition": "56",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "ATLANTIS EL IMPERIO PERDIDO",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-44mx46057-57-1692006032264-4.jpg",
+            "edition": "57",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "WALL.E",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-44mx46058-58-1692006330021-4.jpg",
+            "edition": "58",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "BIG HERO 6",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-44mx46059-59-1692006587524-4.jpg",
+            "edition": "59",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "OLIVER Y SU PANDILLA",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-44mx46060-60-1692006671921-4.jpg",
+            "edition": "60",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "EL REY LEÓN 2",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-44mx46061-61-1692006762320-4.jpg",
+            "edition": "61",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "CARS 3",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-44mx46062-62-1692006856966-4.jpg",
+            "edition": "62",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "Los rescatadores en Cangurolandia",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05063-audiocuentos-disney-entrega-63-rescatadores-1649012056589-cloned-at1695919548494-4.jpg",
+            "edition": "63",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "Ralph rompe internet",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05064-audiocuentos-disney-entrega-64-ralph-1650286880743-cloned-at1695919548517-4.jpg",
+            "edition": "64",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "Toy Story 3",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05065-audiocuentos-disney-entrega-65-toy-story-1650696833776-cloned-at1695919548535-4.jpg",
+            "edition": "65",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "Hermano oso 2",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05066-audiocuentos-disney-entrega-66-hermano-oso-1651400203395-cloned-at1695919548552-4.jpg",
+            "edition": "66",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "Aviones",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05067-audiocuentos-disney-entrega-67-aviones-1652633017471-cloned-at1695919548568-4.jpg",
+            "edition": "67",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "Peter Pan",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05068-audiocuentos-disney-entrega-68-peter-pan-1652633114358-cloned-at1695919548587-4.jpg",
+            "edition": "68",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "Toy Story 4",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05069-audiocuentos-disney-entrega-69-toy-story-4-1653143666990-cloned-at1695919548604-4.jpg",
+            "edition": "69",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "El libro de la selva 2",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05070-audiocuentos-disney-entrega-70-libro-selva-2-1654369717353-cloned-at1695919548620-4.jpg",
+            "edition": "70",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "La gran película de Piglet",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05071-audiocuentos-disney-entrega-71-piglet-1655018726730-cloned-at1695919548642-4.jpg",
+            "edition": "71",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "El planeta del tesoro",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05072-audiocuentos-disney-entrega-72-planeta-del-tesoro-1655664607734-cloned-at1695919548667-4.jpg",
+            "edition": "72",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "Chicken Little",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05073-audiocuentos-disney-entrega-73-chicken-little-1656269340390-cloned-at1695919548690-4.jpg",
+            "edition": "73",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "Taron y el caldero mágico",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05074-audiocuentos-disney-entrega-74-taron-caldero-magico-1656869346086-cloned-at1695919548711-4.jpg",
+            "edition": "74",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "Descubriendo a los Robinson",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05075-audiocuentos-disney-entrega-75-robinson-1657535637069-cloned-at1695919548734-4.jpg",
+            "edition": "75",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "Bambi 2",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05076-audiocuentos-disney-entrega-76-bambi2-1658128438238-cloned-at1695919548763-4.jpg",
+            "edition": "76",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "102 Dálmatas",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05077-audiocuentos-disney-entrega-77-102-dalmatas-1658999017292-cloned-at1695919548784-4.jpg",
+            "edition": "77",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "Aviones: equipo de rescate",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05078-audiocuentos-disney-entrega-78-aviones-1658999096465-cloned-at1695919548807-4.jpg",
+            "edition": "78",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "Dinosaurio",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05079-audiocuentos-disney-entrega-79-dinosaurio-1660237034267-cloned-at1695919548831-4.jpg",
+            "edition": "79",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "Campanilla",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05080-audiocuentos-disney-entrega-80-campanilla-1660237097791-cloned-at1695919548858-4.jpg",
+            "edition": "80",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "Soul",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05081-audiocuentos-disney-entrega-81-soul-1661504020957-cloned-at1707476087039-4.jpg",
+            "edition": "81",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "Frozen Fever",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05082-audiocuentos-disney-entrega-82-frozen-1661504095193-cloned-at1707476087075-4.jpg",
+            "edition": "82",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "El emperador y sus locuras",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05083-audiocuentos-disney-entrega-83-emperador-1661504165335-cloned-at1707476087097-4.jpg",
+            "edition": "83",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "La guardia del león",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05084-audiocuentos-disney-entrega-84-guardia-leon-1661504236311-cloned-at1707476087118-4.jpg",
+            "edition": "84",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "Raya y el último dragón",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05085-audiocuentos-disney-entrega-85-raya-1661504297425-cloned-at1707476087143-4.jpg",
+            "edition": "85",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "La película de Heffalump",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05086-audiocuentos-disney-entrega-86-heffalump-1665558384255-cloned-at1707476087162-4.jpg",
+            "edition": "86",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "Olaf, un día de verano perfecto",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05087-audiocuentos-disney-entrega-87-olaf-1667333923345-cloned-at1707476087179-4.jpg",
+            "edition": "87",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "Onward",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05088-audiocuentos-disney-entrega-88-onward-1667737565878-cloned-at1707476087198-4.jpg",
+            "edition": "88",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "101 Dálmatas II",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05089-audiocuentos-disney-entrega-89-101-dalmatas-1668360213445-cloned-at1707476087230-4.jpg",
+            "edition": "89",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "Campanilla: el secreto de las hadas",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05090-audiocuentos-disney-entrega-90-campanilla-1668789787346-cloned-at1707476087255-4.jpg",
+            "edition": "90",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "Aladdín y el rey de los ladrones",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05091-audiocuentos-disney-entrega-91-aladdin-1670178765084-cloned-at1713685302001-4.jpg",
+            "edition": "91",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "Frozen, luces de invierno",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05092-audiocuentos-disney-entrega-92-frozen-1671904227311-cloned-at1713685302026-4.jpg",
+            "edition": "92",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "La bella y la bestia. Una Navidad encantada",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05093-audiocuentos-disney-entrega-93-bella-y-bestia-1672333918086-cloned-at1713685302048-4.jpg",
+            "edition": "93",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "Vaiana, Pua y HeiHei",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05094-audiocuentos-disney-entrega-94-vaiana-pua-heihei-1672333988968-cloned-at1713685302086-4.jpg",
+            "edition": "94",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "La Sirenita II. Regreso al mar",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05095-audiocuentos-disney-entrega-95-sirenita-1675368254668-cloned-at1716115221534-4.jpg",
+            "edition": "95",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "Érase una vez un muñeco de nieve",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05096-audiocuentos-disney-entrega-96-muneco-nieve-1692870240250-cloned-at1716115221576-4.jpg",
+            "edition": "96",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "Campanilla: hadas y piratas",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-44mx46097-audiocuentos-disney-entrega-97-campanilla-1717062407099-4.jpg",
+            "edition": "97",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "Cenicienta 2",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-44mx46098-audiocuentos-disney-entrega-98-cenicienta-1717062695823-4.jpg",
+            "edition": "98",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "Luca",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-44mx46099-audiocuentos-disney-entrega-99-luca-1717062711627-4.jpg",
+            "edition": "99",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "Encanto",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-44mx46100-audiocuentos-disney-entrega-100-encanto-1717062730063-4.jpg",
+            "edition": "100",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "Lightyear",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-44mx46101-audiocuentos-disney-entrega-101-lightyear-1717062746577-4.jpg",
+            "edition": "101",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "Red",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-44mx46102-audiocuentos-disney-entrega-102-red-1717062764155-4.jpg",
+            "edition": "102",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "La gran búsqueda del club de los cachorros",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-44mx46103-audiocuentos-disney-entrega-103-club-cachorros-1717062783375-4.jpg",
+            "edition": "103",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "Stitch o Trato",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-44mx46104-audiocuentos-disney-entrega-104-stitch-1717062805109-4.jpg",
+            "edition": "104",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "Nuevas aventuras en el bosque de los cien acres",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05105-audiocuentos-disney-entrega-105-aventuras-bosque-1687937923393-cloned-at1720717491351-4.jpg",
+            "edition": "105",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "Las desventuras de Heihei",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05106-audiocuentos-disney-entrega-106-desventuras-heihei-1692870119729-cloned-at1720717491377-4.jpg",
+            "edition": "106",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "El partido de la princesa",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05107-audiocuentos-disney-entrega-107-princesa-1689411457239-cloned-at1720717491397-4.jpg",
+            "edition": "107",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "¡Vaya par!",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05108-audiocuentos-disney-entrega-108-vaya-par-1689411740132-cloned-at1720717491420-4.jpg",
+            "edition": "108",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "La escapada de Figaro",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05109-audiocuentos-disney-entrega-109-figaro-1692870405280-cloned-at1720717491439-4.jpg",
+            "edition": "109",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "Tres monstruos en apuros",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05110-audiocuentos-disney-entrega-110-monstruos-1689412162814-cloned-at1720717491457-4.jpg",
+            "edition": "110",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "Un mundo extraño",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05111-audiocuentos-disney-entrega-111-un-mundo-extrano-1695729833210-cloned-at1720717491476-4.jpg",
+            "edition": "111",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "La gran búsqueda de los huevos de pascua",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05112-audiocuentos-disney-entrega-112-1692870497442-cloned-at1720717491498-4.jpg",
+            "edition": "112",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "El reto de Mérida",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05113-audiocuentos-disney-entrega-113-1692870636885-cloned-at1720717491518-4.jpg",
+            "edition": "113",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "Cars, por amor a las carreras",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05114-audiocuentos-disney-entrega-114-1692870732048-cloned-at1720717491544-4.jpg",
+            "edition": "114",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "Un día de compras con mamá",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05115-audiocuentos-disney-entrega-115-un-dia-de-compras-con-mama-1708336538315-cloned-at1720717491569-4.jpg",
+            "edition": "115",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "El invierno no es para Tiana",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05116-audiocuentos-disney-entrega-116-el-invierno-no-es-para-tiana-1704447863189-cloned-at1720717491596-4.jpg",
+            "edition": "116",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "Juegos de hielo",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05117-audiocuentos-disney-entrega-117-juegos-de-hielo-1704448059947-cloned-at1720717491619-4.jpg",
+            "edition": "117",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "La fiesta sorpresa",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05118-audiocuentos-disney-entrega-118-la-fiesta-sorpresa-1708336566264-cloned-at1730283956019-3.jpg",
+            "edition": "118",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "El comienzo de Ariel",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05119-audiocuentos-disney-entrega-119-el-comienzo-de-ariel-1708336608036-cloned-at1730283956079-3.jpg",
+            "edition": "119",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "La banda de Riley y Bing Bong",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05120-audiocuentos-disney-entrega-120-la-banda-de-riley-y-bing-bong-1708336631995-cloned-at1730283956112-3.jpg",
+            "edition": "120",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "¡Olas a gogó!",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05121-audiocuentos-disney-entrega-121-ola-a-gogo-1708336652733-cloned-at1730283956137-3.jpg",
+            "edition": "121",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "Aurora y el jardín encantado",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05122-audiocuentos-disney-entrega-122-1698755242753-cloned-at1730283956166-3.jpg",
+            "edition": "122",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "El gran día de Timoteo",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05123-audiocuentos-disney-entrega-123-1698755283131-cloned-at1730283956192-3.jpg",
+            "edition": "123",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "Cars ¡vaya bombero!",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05124-audiocuentos-disney-entrega-124-cars-vaya-bombero-1708336674870-cloned-at1730283956212-3.jpg",
+            "edition": "124",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "Pepita y Dante al rescate",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05125-audiocuentos-disney-entrega-125-pepita-y-dante-al-rescate-1711359116577-cloned-at1730283956234-3.jpg",
+            "edition": "125",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "Red ¡Mola ser panda!",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05126-audiocuentos-disney-entrega-126-red-mola-ser-panda-1711359139673-cloned-at1730283956255-3.jpg",
+            "edition": "126",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "Campanilla y el tesoro perdido",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05127-audiocuentos-disney-entrega-127-campanilla-y-el-tesoro-perdido-1711359166305-cloned-at1730283956283-3.jpg",
+            "edition": "127",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "Pooh ¡Pide un deseo!",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05128-audiocuentos-disney-entrega-128-pooh-pide-un-deseo-1711359203582-cloned-at1730283956301-3.jpg",
+            "edition": "128",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "La nueva némesis de Hades",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05129-audiocuentos-disney-entrega-129-la-nueva-nemesis-de-hades-1711359184352-cloned-at1730283956322-3.jpg",
+            "edition": "129",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "¡Te pillé, Dory!",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05130-audiocuentos-disney-entrega-130-te-pille-dory-1711359223452-cloned-at1730283956343-3.jpg",
+            "edition": "130",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "El gran plan de Ducky y Bunny",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05131-audiocuentos-disney-entrega-131-el-gran-plan-de-ducky-y-bunny-1711359242482-cloned-at1730283956366-3.jpg",
+            "edition": "131",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "Al rescate",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05149-audiocuentos-disney-entrega-149-1714549813310-cloned-at1738319331674-1.jpg",
+            "edition": "132",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "Wendy y su nueva aventura",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05132-audiocuentos-disney-entrega-132-wendy-y-su-nueva-aventura-1711359259754-cloned-at1738319331726-1.jpg",
+            "edition": "133",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "El viaje de invierno",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05133-audiocuentos-disney-entrega-133-el-viaje-de-invierno-1711359280146-cloned-at1738319331748-1.jpg",
+            "edition": "134",
+            "code": "",
+            "id": ""
+        },
+        {
+            "description": "Tiana, aprendiz de jardinera",
+            "image": "https://cdn.deagostini.com/dea/live/media/entrega-011p05150-audiocuentos-disney-entrega-150-1714549829182-cloned-at1738319331768-1.jpg",
+            "edition": "135",
+            "code": "",
+            "id": ""
+        }
+    ]
+},
+                {
                     name: "Star Wars Millennium Falcon | De Agostini España",
                     cover: "",
                     editions: [
