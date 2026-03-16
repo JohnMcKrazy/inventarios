@@ -149,6 +149,20 @@ OPTION {
     @include flexCenter;
     width: 100%;
 }
+.float_btn {
+    position: absolute;
+    border-radius: var(--br);
+    background: var(--bg_t);
+    padding: 1rem;
+    text-align: center;
+    @include flexCenter;
+    width: var(--iconSize + 1rem);
+    height: var(--iconSize + 1rem);
+}
+.return_btn {
+    top: calc(var(--navHeight) + 1rem);
+    left: 1rem;
+}
 
 .nav {
     position: fixed;

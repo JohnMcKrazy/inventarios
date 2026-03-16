@@ -79,7 +79,7 @@ const resetSubwindows = () => {
         subwindow.setAttribute("visible", "false");
     });
 };
-const showItemData = (editorialName, item) => {
+const showItemData = (editorial, item) => {
     console.log(item);
     const windowTarget = selector('[window="item"]');
     const cardsContainer = selector("[cards-container='item_editions']");
@@ -90,7 +90,7 @@ const showItemData = (editorialName, item) => {
     item.editions.forEach((edition) => {
         count++;
         console.log(edition);
-        createEditionCard(editorialName, edition, item.name, cardsContainer);
+        createEditionCard(editorial, edition, item.name, cardsContainer);
     });
     counter.textContent = count;
 };
@@ -220,7 +220,7 @@ menuActionBtns.forEach((menuActionBtn) => {
     });
 });
 
-const createEditionCard = (editorialName, data, itemName, container) => {
+const createEditionCard = (editorial, data, itemName, container) => {
     /* console.log(data); */
     const newEdition = editionCardTemplate.cloneNode(true);
     const card = selector('[selector="card"]', newEdition);
@@ -230,19 +230,25 @@ const createEditionCard = (editorialName, data, itemName, container) => {
     const image = selector('[selector="image"]', newEdition);
     const btn = selector(".btn", newEdition);
     const editorialImage = selector('[selector="editorial_image"]', newEdition);
+    const editorialName = selector('[selector="editorial_name"]', newEdition);
+
     code.textContent = data.code;
     edition.textContent = data.edition;
     description.textContent = data.description;
     /* console.log(data.image); */
     image.src = data.image === "" ? noImgLink : data.image;
+    console.log(editorial);
+    showEditorialIcon(editorial.tag, editorialImage);
+    editorialName.textContent = editorial.name;
     container.appendChild(newEdition);
     btn.addEventListener("click", () => {
         console.log("click edition");
-        showEditionData(editorialName, itemName, data);
+        showEditionData(editorial.name, itemName, data);
     });
 };
 
-const createItemCard = (editorialName, item) => {
+const createItemCard = (editorial, item) => {
+    console.log(editorial);
     const createEditionPill = (ed, container) => {
         const newEdition = editionPillTemplate.cloneNode(true);
         const edition = selector('[selector="edition"]', newEdition);
@@ -282,7 +288,7 @@ const createItemCard = (editorialName, item) => {
         resetWindows();
         const target = button.getAttribute("show");
         windowActions("window", "false", target);
-        showItemData(editorialName, item);
+        showItemData(editorial, item);
     });
 };
 const setSearchStartCards = () => {
@@ -312,16 +318,21 @@ searchBtn.addEventListener("click", (e) => {
         windowActions("window", "false", "search");
         searchBtn.setAttribute("btn-active", "true");
         let itemsCount = 0;
+        let editorialsCount = 0;
         let editionsCount = 0;
         searchInput.value = null;
         deleteChildElements(resultEditionsContainer);
         deleteChildElements(resultitemsContainer);
 
         db.editoriales.forEach((editorial) => {
+            if (editorial.name.toLocaleLowerCase().includes(searchText)) {
+                console.log(editorial.name);
+                editorialsCount++;
+            }
             editorial.items.forEach((item) => {
                 console.log(item);
                 if (item.name.toLowerCase().includes(searchText)) {
-                    createItemCard(editorial.name, item);
+                    createItemCard(editorial, item);
                     itemsCount++;
                 }
             });
@@ -330,7 +341,7 @@ searchBtn.addEventListener("click", (e) => {
                     if (edition.description.toLowerCase().includes(searchText)) {
                         console.log(searchText, edition.description.toLowerCase());
 
-                        createEditionCard(editorial.name, edition, item.name, resultEditionsContainer);
+                        createEditionCard(editorial, edition, item.name, resultEditionsContainer);
                         editionsCount++;
                     }
                 });
@@ -339,6 +350,7 @@ searchBtn.addEventListener("click", (e) => {
 
         selector('[count="items"]', selector("[submenu-btn='results_items']")).textContent = itemsCount;
         selector('[count="editions"]', selector("[submenu-btn='results_editions']")).textContent = editionsCount;
+        selector('[count="editorials"]', selector("[submenu-btn='results_editorials']")).textContent = editorialsCount;
     }
 });
 
@@ -347,6 +359,16 @@ selector("[close-modal-btn]").addEventListener("click", () => {
     selector(`[close-modal-window]`).close();
 });
 
+const fetchSvg = (tag) => selector(`[template-ref='${tag}_svg']`).content;
+const showEditorialIcon = (editorialTag, container) => {
+    console.log(container);
+    console.log(editorialTag);
+    const svg = fetchSvg(editorialTag);
+    console.log(svg);
+
+    const newIcon = svg.cloneNode(true);
+    container.appendChild(newIcon);
+};
 /* GENERADOR DE CODIGOS */
 /* 
 const creatorID=(long)=> {
@@ -376,7 +398,7 @@ const nuevoId = generarIdUnico(12); // Genera un ID de 12 caracteres
 console.log(nuevoId); 
  */
 
-const collectionData = [
+/* const collectionData = [
     {
         description: "Tom Ford",
         image: "https://tienda.rba.es/media/catalog/product/cache/27a5c083cc7e6364885f9476615ec4e4/H/0/H018042_12.jpg",
@@ -762,4 +784,4 @@ const collectionData = [
 
 const collectionsSorted = collectionData.sort((a, b) => a.edition - b.edition);
 const uniqueArray = collectionsSorted.filter((obj, index, self) => index === self.findIndex((o) => o.edition === obj.edition));
-console.log(uniqueArray);
+console.log(uniqueArray); */
