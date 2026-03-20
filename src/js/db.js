@@ -1508,7 +1508,7 @@ export const db = {
             tag: "deAgostini",
             items: [
                 {
-                    name: "Star Wars Millennium Falcon | De Agostini España",
+                    name: "Star Wars Millennium Falcon",
                     cover: "",
                     editions: [
                         {
@@ -1738,7 +1738,7 @@ export const db = {
                     ],
                 },
                 {
-                    name: "Dodge Charger R/T - Planeta DeAgostini España",
+                    name: "Dodge Charger R/T",
                     cover: "",
                     editions: [
                         {
@@ -2444,7 +2444,7 @@ export const db = {
                     ],
                 },
                 {
-                    name: "Marvel Movie Figurines | Planeta DeAgostini",
+                    name: "Marvel Movie Figurines",
                     cover: "",
                     editions: [
                         {
@@ -3444,7 +3444,7 @@ export const db = {
                     ],
                 },
                 {
-                    name: "Los grandes Ferrari F1 | Planeta DeAgostini",
+                    name: "Los grandes Ferrari F1",
                     cover: "",
                     editions: [
                         {
@@ -3695,7 +3695,7 @@ export const db = {
                     ],
                 },
                 {
-                    name: "Colección american cars | Planeta DeAgostini",
+                    name: "Colección american cars",
                     cover: "",
                     editions: [
                         {
@@ -4135,7 +4135,7 @@ export const db = {
                     ],
                 },
                 {
-                    name: "Construye el Batmovil de 1989 a escala 1:8 | Planeta DeAgostini España",
+                    name: "Construye el Batmovil de 1989 a escala 1:8",
                     cover: "",
                     editions: [
                         {
@@ -4365,7 +4365,7 @@ export const db = {
                     ],
                 },
                 {
-                    name: "Dodge Charger R/T - Planeta DeAgostini España",
+                    name: "Dodge Charger R/T",
                     cover: "",
                     editions: [
                         {
@@ -5071,7 +5071,7 @@ export const db = {
                     ],
                 },
                 {
-                    name: "Ford Mustang John Wick | Planeta DeAgostini España",
+                    name: "Ford Mustang John Wick",
                     cover: "",
                     editions: [
                         {
@@ -5202,9 +5202,242 @@ export const db = {
                         },
                     ],
                 },
+<<<<<<< HEAD
 
+=======
                 {
-                    name: "Star Wars Millennium Falcon | De Agostini España",
+                    name: "Ford Mustang Shelby 1:6",
+                    cover: "",
+                    editions: [
+                        {
+                            description: "Magazine",
+                            image: "https://cdn.deagostini.com/dea/live/media/03-ford-mustang-shelby-es/03-ford-mustang-shelby-es_optmzd_80.png",
+                            edition: "3",
+                            code: "",
+                            id: "",
+                        },
+                        {
+                            description: "Magazine",
+                            image: "https://cdn.deagostini.com/dea/live/media/04-ford-mustang-shelby-es/04-ford-mustang-shelby-es_optmzd_80.png",
+                            edition: "4",
+                            code: "",
+                            id: "",
+                        },
+                        {
+                            description: "Magazine",
+                            image: "https://cdn.deagostini.com/dea/live/media/05-ford-mustang-shelby-es/05-ford-mustang-shelby-es_optmzd_80.png",
+                            edition: "5",
+                            code: "",
+                            id: "",
+                        },
+                        {
+                            description: "Magazine",
+                            image: "https://cdn.deagostini.com/dea/live/media/06-ford-mustang-shelby-es/06-ford-mustang-shelby-es_optmzd_80.png",
+                            edition: "6",
+                            code: "",
+                            id: "",
+                        },
+                        {
+                            description: "Magazine",
+                            image: "https://cdn.deagostini.com/dea/live/media/07-ford-mustang-shelby-es/07-ford-mustang-shelby-es_optmzd_80.png",
+                            edition: "7",
+                            code: "",
+                            id: "",
+                        },
+                        {
+                            description: "Magazine",
+                            image: "https://cdn.deagostini.com/dea/live/media/08-ford-mustang-shelby-es/08-ford-mustang-shelby-es_optmzd_80.png",
+                            edition: "8",
+                            code: "",
+                            id: "",
+                        },
+                        {
+                            description: "Magazine",
+                            image: "https://cdn.deagostini.com/dea/live/media/09-ford-mustang-shelby-es/09-ford-mustang-shelby-es_optmzd_80.png",
+                            edition: "9",
+                            code: "",
+                            id: "",
+                        },
+                        {
+                            description: "Magazine",
+                            image: "https://cdn.deagostini.com/dea/live/media/10-ford-mustang-shelby-es/10-ford-mustang-shelby-es_optmzd_80.png",
+                            edition: "10",
+                            code: "",
+                            id: "",
+                        },
+                        {
+                            description: "Magazine",
+                            image: "https://cdn.deagostini.com/dea/live/media/11-ford-mustang-shelby-es/11-ford-mustang-shelby-es_optmzd_80.png",
+                            edition: "11",
+                            code: "",
+                            id: "",
+                        },
+                        {
+                            description: "Magazine",
+                            image: "https://cdn.deagostini.com/dea/live/media/12-ford-mustang-shelby-es/12-ford-mustang-shelby-es_optmzd_80.png",
+                            edition: "12",
+                            code: "",
+                            id: "",
+                        },
+                        {
+                            description: "Magazine",
+                            image: "https://cdn.deagostini.com/dea/live/media/13-ford-mustang-shelby-es/13-ford-mustang-shelby-es_optmzd_80.png",
+                            edition: "13",
+                            code: "",
+                            id: "",
+                        },
+                        {
+                            description: "Magazine",
+                            image: "https://cdn.deagostini.com/dea/live/media/14-ford-mustang-shelby-es/14-ford-mustang-shelby-es_optmzd_80.png",
+                            edition: "14",
+                            code: "",
+                            id: "",
+                        },
+                        {
+                            description: "Magazine",
+                            image: "https://cdn.deagostini.com/dea/live/media/15-ford-mustang-shelby-es/15-ford-mustang-shelby-es_optmzd_80.png",
+                            edition: "15",
+                            code: "",
+                            id: "",
+                        },
+                        {
+                            description: "Magazine",
+                            image: "https://cdn.deagostini.com/dea/live/media/16-ford-mustang-shelby-es/16-ford-mustang-shelby-es_optmzd_80.png",
+                            edition: "16",
+                            code: "",
+                            id: "",
+                        },
+                        {
+                            description: "Magazine",
+                            image: "https://cdn.deagostini.com/dea/live/media/17-ford-mustang-shelby-es/17-ford-mustang-shelby-es_optmzd_80.png",
+                            edition: "17",
+                            code: "",
+                            id: "",
+                        },
+                        {
+                            description: "Magazine",
+                            image: "https://cdn.deagostini.com/dea/live/media/18-ford-mustang-shelby-es/18-ford-mustang-shelby-es_optmzd_80.png",
+                            edition: "18",
+                            code: "",
+                            id: "",
+                        },
+                        {
+                            description: "Magazine",
+                            image: "https://cdn.deagostini.com/dea/live/media/19-ford-mustang-shelby-es/19-ford-mustang-shelby-es_optmzd_80.png",
+                            edition: "19",
+                            code: "",
+                            id: "",
+                        },
+                        {
+                            description: "Magazine",
+                            image: "https://cdn.deagostini.com/dea/live/media/20-ford-mustang-shelby-es/20-ford-mustang-shelby-es_optmzd_80.png",
+                            edition: "20",
+                            code: "",
+                            id: "",
+                        },
+                        {
+                            description: "Magazine",
+                            image: "https://cdn.deagostini.com/dea/live/media/21-ford-mustang-shelby-es/21-ford-mustang-shelby-es_optmzd_80.png",
+                            edition: "21",
+                            code: "",
+                            id: "",
+                        },
+                        {
+                            description: "Magazine",
+                            image: "https://cdn.deagostini.com/dea/live/media/22-ford-mustang-shelby-es/22-ford-mustang-shelby-es_optmzd_80.png",
+                            edition: "22",
+                            code: "",
+                            id: "",
+                        },
+                        {
+                            description: "Magazine",
+                            image: "https://cdn.deagostini.com/dea/live/media/23-ford-mustang-shelby-es/23-ford-mustang-shelby-es_optmzd_80.png",
+                            edition: "23",
+                            code: "",
+                            id: "",
+                        },
+                        {
+                            description: "Magazine",
+                            image: "https://cdn.deagostini.com/dea/live/media/24-ford-mustang-shelby-es/24-ford-mustang-shelby-es_optmzd_80.png",
+                            edition: "24",
+                            code: "",
+                            id: "",
+                        },
+                        {
+                            description: "Magazine",
+                            image: "https://cdn.deagostini.com/dea/live/media/entrega-011p99025-ford-mustang-entrega-25-1703769373969-1.jpg",
+                            edition: "25",
+                            code: "",
+                            id: "",
+                        },
+                        {
+                            description: "Magazine",
+                            image: "https://cdn.deagostini.com/dea/live/media/entrega-011p99026-ford-mustang-entrega-26-1703769388284-1.jpg",
+                            edition: "26",
+                            code: "",
+                            id: "",
+                        },
+                        {
+                            description: "Magazine",
+                            image: "https://cdn.deagostini.com/dea/live/media/entrega-011p99027-ford-mustang-entrega-27-1703769402512-1.jpg",
+                            edition: "27",
+                            code: "",
+                            id: "",
+                        },
+                        {
+                            description: "Magazine",
+                            image: "https://cdn.deagostini.com/dea/live/media/entrega-011p99028-ford-mustang-entrega-28-1711362886000.jpg",
+                            edition: "28",
+                            code: "",
+                            id: "",
+                        },
+                        {
+                            description: "Magazine",
+                            image: "https://cdn.deagostini.com/dea/live/media/entrega-011p99029-ford-mustang-entrega-29-1711362899159.jpg",
+                            edition: "29",
+                            code: "",
+                            id: "",
+                        },
+                        {
+                            description: "Magazine",
+                            image: "https://cdn.deagostini.com/dea/live/media/entrega-011p99030-ford-mustang-entrega-30-1711362911441.jpg",
+                            edition: "30",
+                            code: "",
+                            id: "",
+                        },
+                        {
+                            description: "Magazine",
+                            image: "https://cdn.deagostini.com/dea/live/media/entrega-011p99031-ford-mustang-entrega-31-1711362922000.jpg",
+                            edition: "31",
+                            code: "",
+                            id: "",
+                        },
+                        {
+                            description: "Magazine",
+                            image: "https://cdn.deagostini.com/dea/live/media/entrega-011p99032-ford-mustang-entrega-32-1711362931687.jpg",
+                            edition: "32",
+                            code: "",
+                            id: "",
+                        },
+                        {
+                            description: "Magazine",
+                            image: "https://cdn.deagostini.com/dea/live/media/entrega-011p99033-ford-mustang-entrega-33-1711362942293.jpg",
+                            edition: "33",
+                            code: "",
+                            id: "",
+                        },
+                        {
+                            description: "Magazine",
+                            image: "https://cdn.deagostini.com/dea/live/media/entrega-011p99034-ford-mustang-entrega-34-1715234565536-1.jpg",
+                            edition: "34",
+                            code: "",
+                            id: "",
+                        },
+                    ],
+                },
+>>>>>>> e403005c8105fa744e6ac0d443152acfff6357e6
+                {
+                    name: "Star Wars Millennium Falcon",
                     cover: "",
                     editions: [
                         {
@@ -5434,7 +5667,7 @@ export const db = {
                     ],
                 },
                 {
-                    name: "Red Bull RB19 - Verstappen | Planeta DeAgostini España",
+                    name: "Red Bull RB19 - Verstappen",
                     cover: "",
                     editions: [
                         {
@@ -5832,7 +6065,7 @@ export const db = {
                     ],
                 },
                 {
-                    name: "DeLorean 2ed ES | Planeta DeAgostini",
+                    name: "DeLorean 2ed",
                     cover: "",
                     editions: [
                         {
@@ -6433,7 +6666,7 @@ export const db = {
                     ],
                 },
                 {
-                    name: "Maqueta Batmóvil 1966 | Planeta DeAgostini",
+                    name: "Maqueta Batmóvil 1966",
                     cover: "",
                     editions: [
                         {
@@ -7281,9 +7514,88 @@ export const db = {
                         },
                     ],
                 },
+<<<<<<< HEAD
 
+=======
                 {
-                    name: "Maqueta Star Wars R2 D2 | Planeta DeAgostini",
+                    name: "Ford Mustang Shelby GT-500",
+                    cover: "",
+                    editions: [
+                        {
+                            description: "Ford Mustang Shelby Build Up 1:6 CMC 1",
+                            image: "https://cdn.deagostini.com/dea/live/media/entrega-011p99001-entregas-mustang-01-1665677518908.jpg",
+                            edition: "1",
+                            code: "",
+                            id: "",
+                        },
+                        {
+                            description: "Ford Mustang Shelby Build Up 1:6 CMC 2",
+                            image: "https://cdn.deagostini.com/dea/live/media/entrega-011p99002-entregas-mustang-02-1665677536275.jpg",
+                            edition: "2",
+                            code: "",
+                            id: "",
+                        },
+                        {
+                            description: "Ford Mustang Shelby Build Up 1:6 CMC 3",
+                            image: "https://cdn.deagostini.com/dea/live/media/entrega-011p99003-entregas-mustang-03-1665677572351.jpg",
+                            edition: "3",
+                            code: "",
+                            id: "",
+                        },
+                        {
+                            description: "Ford Mustang Shelby Build Up 1:6 CMC 4",
+                            image: "https://cdn.deagostini.com/dea/live/media/entrega-011p99004-entregas-mustang-04-1665677598155.jpg",
+                            edition: "4",
+                            code: "",
+                            id: "",
+                        },
+                        {
+                            description: "Ford Mustang Shelby Build Up 1:6 CMC 5",
+                            image: "https://cdn.deagostini.com/dea/live/media/entrega-011p99005-ford-mustang-entrega-5-1669140662793.jpg",
+                            edition: "5",
+                            code: "",
+                            id: "",
+                        },
+                        {
+                            description: "Ford Mustang Shelby Build Up 1:6 CMC 6",
+                            image: "https://cdn.deagostini.com/dea/live/media/entrega-011p99006-ford-mustang-entrega-6-1669140717348.jpg",
+                            edition: "6",
+                            code: "",
+                            id: "",
+                        },
+                        {
+                            description: "Ford Mustang Shelby Build Up 1:6 CMC 7",
+                            image: "https://cdn.deagostini.com/dea/live/media/entrega-011p99007-ford-mustang-entrega-7-1669140771881.jpg",
+                            edition: "7",
+                            code: "",
+                            id: "",
+                        },
+                        {
+                            description: "Ford Mustang Shelby Build Up 1:6 CMC 8",
+                            image: "https://cdn.deagostini.com/dea/live/media/entrega-011p99008-ford-mustang-entrega-8-1669140822985.jpg",
+                            edition: "8",
+                            code: "",
+                            id: "",
+                        },
+                        {
+                            description: "Ford Mustang Shelby Build Up 1:6 CMC 9",
+                            image: "https://cdn.deagostini.com/dea/live/media/entrega-011p99009-ford-mustang-entrega-9-1674906868144.jpg",
+                            edition: "9",
+                            code: "",
+                            id: "",
+                        },
+                        {
+                            description: "Ford Mustang Shelby Build Up 1:6 CMC 10",
+                            image: "https://cdn.deagostini.com/dea/live/media/entrega-011p99010-ford-mustang-entrega-10-1674906917385.jpg",
+                            edition: "10",
+                            code: "",
+                            id: "",
+                        },
+                    ],
+                },
+>>>>>>> e403005c8105fa744e6ac0d443152acfff6357e6
+                {
+                    name: "Maqueta Star Wars R2 D2",
                     cover: "",
                     editions: [
                         {
@@ -7976,236 +8288,6 @@ export const db = {
                             description: "Piezas",
                             image: "https://cdn.deagostini.com/dea/live/media/r2d2-entregas-100/r2d2-entregas-100_optmzd_80.jpg",
                             edition: "100",
-                            code: "",
-                            id: "",
-                        },
-                    ],
-                },
-                {
-                    name: "Maqueta Star Wars R2 D2 | Planeta DeAgostini",
-                    cover: "",
-                    editions: [
-                        {
-                            description: "Magazine",
-                            image: "https://cdn.deagostini.com/dea/live/media/01-entregas-r2-d2/01-entregas-r2-d2_optmzd_80.png",
-                            edition: "1",
-                            code: "",
-                            id: "",
-                        },
-                        {
-                            description: "Magazine",
-                            image: "https://cdn.deagostini.com/dea/live/media/02-entregas-r2-d2/02-entregas-r2-d2_optmzd_80.png",
-                            edition: "2",
-                            code: "",
-                            id: "",
-                        },
-                        {
-                            description: "Magazine",
-                            image: "https://cdn.deagostini.com/dea/live/media/03-entregas-r2-d2/03-entregas-r2-d2_optmzd_80.png",
-                            edition: "3",
-                            code: "",
-                            id: "",
-                        },
-                        {
-                            description: "Magazine",
-                            image: "https://cdn.deagostini.com/dea/live/media/04-entregas-r2-d2/04-entregas-r2-d2_optmzd_80.png",
-                            edition: "4",
-                            code: "",
-                            id: "",
-                        },
-                        {
-                            description: "Magazine",
-                            image: "https://cdn.deagostini.com/dea/live/media/05-entregas-r2-d2/05-entregas-r2-d2_optmzd_80.png",
-                            edition: "5",
-                            code: "",
-                            id: "",
-                        },
-                        {
-                            description: "Magazine",
-                            image: "https://cdn.deagostini.com/dea/live/media/06-entregas-r2-d2/06-entregas-r2-d2_optmzd_80.png",
-                            edition: "6",
-                            code: "",
-                            id: "",
-                        },
-                        {
-                            description: "Magazine",
-                            image: "https://cdn.deagostini.com/dea/live/media/07-entregas-r2-d2/07-entregas-r2-d2_optmzd_80.png",
-                            edition: "7",
-                            code: "",
-                            id: "",
-                        },
-                        {
-                            description: "Magazine",
-                            image: "https://cdn.deagostini.com/dea/live/media/08-entregas-r2-d2/08-entregas-r2-d2_optmzd_80.png",
-                            edition: "8",
-                            code: "",
-                            id: "",
-                        },
-                        {
-                            description: "Magazine",
-                            image: "https://cdn.deagostini.com/dea/live/media/09-entregas-r2-d2/09-entregas-r2-d2_optmzd_80.png",
-                            edition: "9",
-                            code: "",
-                            id: "",
-                        },
-                        {
-                            description: "Magazine",
-                            image: "https://cdn.deagostini.com/dea/live/media/10-entregas-r2-d2/10-entregas-r2-d2_optmzd_80.png",
-                            edition: "10",
-                            code: "",
-                            id: "",
-                        },
-                        {
-                            description: "Magazine",
-                            image: "https://cdn.deagostini.com/dea/live/media/11-entregas-r2-d2/11-entregas-r2-d2_optmzd_80.png",
-                            edition: "11",
-                            code: "",
-                            id: "",
-                        },
-                        {
-                            description: "Magazine",
-                            image: "https://cdn.deagostini.com/dea/live/media/12-entregas-r2-d2/12-entregas-r2-d2_optmzd_80.png",
-                            edition: "12",
-                            code: "",
-                            id: "",
-                        },
-                        {
-                            description: "Magazine",
-                            image: "https://cdn.deagostini.com/dea/live/media/13-entregas-r2-d2/13-entregas-r2-d2_optmzd_80.png",
-                            edition: "13",
-                            code: "",
-                            id: "",
-                        },
-                        {
-                            description: "Magazine",
-                            image: "https://cdn.deagostini.com/dea/live/media/14-entregas-r2-d2/14-entregas-r2-d2_optmzd_80.png",
-                            edition: "14",
-                            code: "",
-                            id: "",
-                        },
-                        {
-                            description: "Magazine",
-                            image: "https://cdn.deagostini.com/dea/live/media/15-entregas-r2-d2/15-entregas-r2-d2_optmzd_80.png",
-                            edition: "15",
-                            code: "",
-                            id: "",
-                        },
-                        {
-                            description: "Magazine",
-                            image: "https://cdn.deagostini.com/dea/live/media/16-entregas-r2-d2/16-entregas-r2-d2_optmzd_80.png",
-                            edition: "16",
-                            code: "",
-                            id: "",
-                        },
-                        {
-                            description: "Magazine",
-                            image: "https://cdn.deagostini.com/dea/live/media/17-entregas-r2-d2/17-entregas-r2-d2_optmzd_80.png",
-                            edition: "17",
-                            code: "",
-                            id: "",
-                        },
-                        {
-                            description: "Magazine",
-                            image: "https://cdn.deagostini.com/dea/live/media/18-entregas-r2-d2/18-entregas-r2-d2_optmzd_80.png",
-                            edition: "18",
-                            code: "",
-                            id: "",
-                        },
-                        {
-                            description: "Magazine",
-                            image: "https://cdn.deagostini.com/dea/live/media/19-entregas-r2-d2/19-entregas-r2-d2_optmzd_80.png",
-                            edition: "19",
-                            code: "",
-                            id: "",
-                        },
-                        {
-                            description: "Magazine",
-                            image: "https://cdn.deagostini.com/dea/live/media/20-entregas-r2-d2/20-entregas-r2-d2_optmzd_80.png",
-                            edition: "20",
-                            code: "",
-                            id: "",
-                        },
-                        {
-                            description: "Magazine",
-                            image: "https://cdn.deagostini.com/dea/live/media/21-entregas-r2-d2/21-entregas-r2-d2_optmzd_80.png",
-                            edition: "21",
-                            code: "",
-                            id: "",
-                        },
-                        {
-                            description: "Magazine",
-                            image: "https://cdn.deagostini.com/dea/live/media/22-entregas-r2-d2/22-entregas-r2-d2_optmzd_80.png",
-                            edition: "22",
-                            code: "",
-                            id: "",
-                        },
-                        {
-                            description: "Magazine",
-                            image: "https://cdn.deagostini.com/dea/live/media/23-entregas-r2-d2/23-entregas-r2-d2_optmzd_80.png",
-                            edition: "23",
-                            code: "",
-                            id: "",
-                        },
-                        {
-                            description: "Magazine",
-                            image: "https://cdn.deagostini.com/dea/live/media/24-entregas-r2-d2/24-entregas-r2-d2_optmzd_80.png",
-                            edition: "24",
-                            code: "",
-                            id: "",
-                        },
-                        {
-                            description: "Magazine",
-                            image: "https://cdn.deagostini.com/dea/live/media/25-entregas-r2-d2/25-entregas-r2-d2_optmzd_80.png",
-                            edition: "25",
-                            code: "",
-                            id: "",
-                        },
-                        {
-                            description: "Magazine",
-                            image: "https://cdn.deagostini.com/dea/live/media/26-entregas-r2-d2/26-entregas-r2-d2_optmzd_80.png",
-                            edition: "26",
-                            code: "",
-                            id: "",
-                        },
-                        {
-                            description: "Magazine",
-                            image: "https://cdn.deagostini.com/dea/live/media/27-entregas-r2-d2/27-entregas-r2-d2_optmzd_80.png",
-                            edition: "27",
-                            code: "",
-                            id: "",
-                        },
-                        {
-                            description: "Magazine",
-                            image: "https://cdn.deagostini.com/dea/live/media/28-entregas-r2-d2/28-entregas-r2-d2_optmzd_80.png",
-                            edition: "28",
-                            code: "",
-                            id: "",
-                        },
-                        {
-                            description: "Magazine",
-                            image: "https://cdn.deagostini.com/dea/live/media/29-entregas-r2-d2/29-entregas-r2-d2_optmzd_80.png",
-                            edition: "29",
-                            code: "",
-                            id: "",
-                        },
-                        {
-                            description: "Magazine",
-                            image: "https://cdn.deagostini.com/dea/live/media/30-entregas-r2-d2/30-entregas-r2-d2_optmzd_80.png",
-                            edition: "30",
-                            code: "",
-                            id: "",
-                        },
-                        {
-                            description: "Magazine",
-                            image: "https://cdn.deagostini.com/dea/live/media/31-entregas-r2-d2/31-entregas-r2-d2_optmzd_80.png",
-                            edition: "31",
-                            code: "",
-                            id: "",
-                        },
-                        {
-                            description: "Magazine",
-                            image: "https://cdn.deagostini.com/dea/live/media/32-entregas-r2-d2/32-entregas-r2-d2_optmzd_80.png",
-                            edition: "32",
                             code: "",
                             id: "",
                         },
@@ -10724,7 +10806,7 @@ export const db = {
                     ],
                 },
                 {
-                    name: "Maqueta Volkswagen VW Beetle Sedan 1/6 para armar | Planeta DeAgostini Mexico",
+                    name: "Maqueta Volkswagen VW Beetle Sedan 1/6 para armar",
                     cover: "",
                     editions: [
                         {
@@ -10807,7 +10889,7 @@ export const db = {
                     ],
                 },
                 {
-                    name: "Ford Mustang 1:43 Collection | Planeta DeAgostini",
+                    name: "Ford Mustang 1:43 Collection",
                     cover: "",
                     editions: [
                         {
@@ -11016,7 +11098,7 @@ export const db = {
                     ],
                 },
                 {
-                    name: "Nissan Skyline | Planeta DeAgostini",
+                    name: "Nissan Skyline",
                     cover: "",
                     editions: [
                         {
