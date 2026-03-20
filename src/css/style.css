@@ -107,6 +107,18 @@ BUTTON {
   background: none;
   border: none;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  fill: var(--tc);
+}
+BUTTON:disabled {
+  opacity: 20%;
+}
+
+SVG {
+  width: 100%;
+  height: 100%;
 }
 
 SELECT {
@@ -158,6 +170,28 @@ OPTION:hover {
   width: 100%;
 }
 
+.close_btn {
+  right: 0;
+  top: 0;
+  height: 2rem;
+  width: 2rem;
+}
+
+.qr_icon {
+  background: white;
+  max-width: 20rem;
+}
+
+[modal=alert] {
+  width: 95%;
+  max-width: 600px;
+}
+
+[modal=qr] {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
 .float_btn {
   position: absolute;
   border-radius: var(--br);
@@ -169,11 +203,6 @@ OPTION:hover {
   align-items: center;
   width: var(--iconSize1rem);
   height: var(--iconSize1rem);
-}
-
-.return_btn {
-  top: calc(var(--navHeight) + 1rem);
-  left: 1rem;
 }
 
 .nav {
@@ -230,14 +259,6 @@ OPTION:hover {
   align-items: center;
   padding: 0.5rem;
 }
-.icon_container SVG {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  fill: var(--tc);
-}
 
 .window {
   flex-direction: column;
@@ -282,12 +303,17 @@ OPTION:hover {
 }
 
 .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   border-radius: var(--br);
   overflow: hidden;
   background: var(--bg_t);
   width: 100%;
   max-width: 30rem;
   padding: 1rem 2rem;
+  gap: 1rem;
 }
 .card H2,
 .card p {
@@ -390,13 +416,21 @@ OPTION:hover {
 .btns_container {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.submenu_btns_container {
+  display: flex;
+  flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
+  width: 100%;
   border-top: solid 2px var(--color_base);
   border-bottom: solid 2px var(--color_base);
-  width: 100%;
 }
-.btns_container BUTTON {
+.submenu_btns_container BUTTON {
   padding: 1rem 0;
   width: 100%;
 }
@@ -433,8 +467,6 @@ DIALOG {
   border-radius: var(--br);
   background: var(--bg_t);
   padding: 0.5rem 1rem;
-  width: 95%;
-  max-width: 600px;
 }
 
 dialog::backdrop {
@@ -560,4 +592,8 @@ SPAN {
   border: var(--btnBorder);
   background: var(--btnBG);
   color: var(--btnText);
+}
+
+td {
+  padding: 0.5rem 1rem;
 }

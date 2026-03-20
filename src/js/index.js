@@ -10,16 +10,18 @@ const pageBody = selector("body");
 const menuBtns = selectorAll("[menu-btn]");
 const submenuBtns = selectorAll("[submenu-btn]");
 const sectionWindows = selectorAll("[window]");
-const sectionSubindows = selectorAll("[subwindow]");
+const sectionSubwindows = selectorAll("[subwindow]");
 
-const dialogWindow = selector("dialog");
+const alertModal = selector("[modal='alert']");
+const qrModal = selector("[modal='qr']");
 const menuActionBtns = selectorAll("[action-menu]");
-const serachResult = selector('[selector="search_result"]');
+const searchResult = selector('[selector="search_result"]');
 const itemCardTemplate = selector("[template-ref='item_card']").content;
 const editionCardTemplate = selector("[template-ref='edition_card']").content;
 const editionPillTemplate = selector("[template-ref='edition_pill']").content;
 const resultEditionsContainer = selector('[cards-container="results_editions"]');
-const resultitemsContainer = selector('[cards-container="results_items"]');
+const resultEditiorialesContainer = selector('[cards-container="results_editorials"]');
+const resultItemsContainer = selector('[cards-container="results_items"]');
 const searchInput = selector('[selector="search_input"]');
 const searchBtn = selector("[search-btn]");
 
@@ -33,6 +35,7 @@ const noEditionData = {
 };
 const html5QrCode = new Html5Qrcode("reader");
 
+const pageRefresh = [];
 const scannerConfig = {
     fps: 10,
     qrbox: { width: 250, height: 250 },
@@ -74,7 +77,7 @@ const resetWindows = () => {
 };
 const resetSubwindows = () => {
     submenuBtns.forEach((btn) => btn.setAttribute("btn-active", "false"));
-    sectionSubindows.forEach((subwindow) => {
+    sectionSubwindows.forEach((subwindow) => {
         subwindow.setAttribute("show", "false");
         subwindow.setAttribute("visible", "false");
     });
@@ -246,7 +249,19 @@ const createEditionCard = (editorial, data, itemName, container) => {
         showEditionData(editorial.name, itemName, data);
     });
 };
-
+const templateEditorialCard = selector("[template-ref='editorial_card']").content;
+const createEditorialCard = (editorial) => {
+    const newEditorial = templateEditorialCard.cloneNode(true);
+    console.log(newEditorial);
+    console.log(editorial);
+    const editorialName = selector('[selector="editorial_name"]', newEditorial);
+    const editorialLogo = selector('[selector="editorial_image"]', newEditorial);
+    console.log(editorialName);
+    console.log(editorialLogo);
+    editorialName.textContent = editorial.name;
+    showEditorialIcon(editorial.tag, editorialLogo);
+    resultEditiorialesContainer.appendChild(newEditorial);
+};
 const createItemCard = (editorial, item) => {
     console.log(editorial);
     const createEditionPill = (ed, container) => {
@@ -268,7 +283,7 @@ const createItemCard = (editorial, item) => {
     const button = selector("button", newItem);
     name.textContent = item.name;
     let thisCount = 0;
-    resultitemsContainer.appendChild(newItem);
+    resultItemsContainer.appendChild(newItem);
     console.log(pillsContainer);
     if (item.editions.length >= 3) {
         for (let count = 0; count <= 2; count++) {
@@ -299,35 +314,37 @@ const setSearchStartCards = () => {
     showEditionData(item.name, edition);
 };
 /* setSearchStartCards(); */
-const setModal = (status, title, description) => {
-    dialogWindow.setAttribute("accent", status);
+const setAlertModal = (status, title, description) => {
+    alertModal.setAttribute("accent", status);
     selector("[dialog-ref='title']").textContent = title;
     selector("[dialog-ref='description']").textContent = description;
-    dialogWindow.showModal();
+    alertModal.showModal();
 };
 searchBtn.addEventListener("click", (e) => {
     e.preventDefault();
     const searchText = sanitizeInput(searchInput.value.toLowerCase().trim());
     if (!searchText || searchText === "") {
-        setModal("bad", "Busqueda Vacia", "Necesitas mínimo 3 caracteres para recibir respuestas de búsqueda");
+        setAlertModal("bad", "Busqueda Vacia", "Necesitas mínimo 3 caracteres para recibir respuestas de búsqueda");
     } else if (searchText.length <= 2) {
-        setModal("bad", "Menos del mínimo", "Necesitas mínimo 3 caracteres para recibir respuestas de búsqueda");
+        setAlertModal("bad", "Menos del mínimo", "Necesitas mínimo 3 caracteres para recibir respuestas de búsqueda");
     } else {
         console.log(searchText);
         resetWindows();
         windowActions("window", "false", "search");
-        searchBtn.setAttribute("btn-active", "true");
+        /* searchBtn.setAttribute("btn-active", "true"); */
         let itemsCount = 0;
         let editorialsCount = 0;
         let editionsCount = 0;
+
         searchInput.value = null;
         deleteChildElements(resultEditionsContainer);
-        deleteChildElements(resultitemsContainer);
+        deleteChildElements(resultItemsContainer);
 
         db.editoriales.forEach((editorial) => {
             if (editorial.name.toLocaleLowerCase().includes(searchText)) {
                 console.log(editorial.name);
                 editorialsCount++;
+                createEditorialCard(editorial);
             }
             editorial.items.forEach((item) => {
                 console.log(item);
@@ -351,14 +368,36 @@ searchBtn.addEventListener("click", (e) => {
         selector('[count="items"]', selector("[submenu-btn='results_items']")).textContent = itemsCount;
         selector('[count="editions"]', selector("[submenu-btn='results_editions']")).textContent = editionsCount;
         selector('[count="editorials"]', selector("[submenu-btn='results_editorials']")).textContent = editorialsCount;
+
+        let highest;
+        let high = Math.max(itemsCount, editionsCount, editorialsCount);
+        console.log(high);
+
+        selectorAll("[count]").forEach((count) => {
+            if (parseInt(count.textContent) === high) {
+                resetSubwindows();
+                console.log(count.getAttribute("count"));
+                const target = selector(`[submenu-btn="results_${count.getAttribute("count")}"]`);
+                console.log(target);
+                windowActions("subwindow", "false", `results_${count.getAttribute("count")}`);
+
+                target.setAttribute("btn-active", target.getAttribute("btn-active") === "true" ? "false" : "true");
+            }
+        });
     }
 });
 
 themeBtn.addEventListener("click", changeTheme);
-selector("[close-modal-btn]").addEventListener("click", () => {
-    selector(`[close-modal-window]`).close();
+selectorAll("[close-modal-btn]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+        const tag = btn.getAttribute("close-modal");
+        const target = selector(`[modal='${tag}']`);
+        target.close();
+    });
 });
-
+selector("[share-qr-btn]").addEventListener("click", () => {
+    qrModal.showModal();
+});
 const fetchSvg = (tag) => selector(`[template-ref='${tag}_svg']`).content;
 const showEditorialIcon = (editorialTag, container) => {
     console.log(container);
@@ -785,3 +824,9 @@ console.log(nuevoId);
 const collectionsSorted = collectionData.sort((a, b) => a.edition - b.edition);
 const uniqueArray = collectionsSorted.filter((obj, index, self) => index === self.findIndex((o) => o.edition === obj.edition));
 console.log(uniqueArray); */
+
+selector("[return-action]").addEventListener("click", () => {
+    console.log("chech return");
+    resetWindows();
+    windowActions("window", "false", `search`);
+});

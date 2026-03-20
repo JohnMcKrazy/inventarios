@@ -106,8 +106,17 @@ BUTTON {
     background: none;
     border: none;
     cursor: pointer;
-}
 
+    @include flexCenter();
+    fill: var(--tc);
+    &:disabled {
+        opacity: 20%;
+    }
+}
+SVG {
+    width: 100%;
+    height: 100%;
+}
 SELECT {
     background: var(--bg_t);
     border: solid var(--text_color) 1px;
@@ -149,6 +158,23 @@ OPTION {
     @include flexCenter;
     width: 100%;
 }
+.close_btn {
+    right: 0;
+    top: 0;
+    height: 2rem;
+    width: 2rem;
+}
+.qr_icon {
+    background: white;
+    max-width: 20rem;
+}
+[modal="alert"] {
+    width: 95%;
+    max-width: 600px;
+}
+[modal="qr"] {
+    width: fit-content;
+}
 .float_btn {
     position: absolute;
     border-radius: var(--br);
@@ -158,10 +184,6 @@ OPTION {
     @include flexCenter;
     width: var(--iconSize + 1rem);
     height: var(--iconSize + 1rem);
-}
-.return_btn {
-    top: calc(var(--navHeight) + 1rem);
-    left: 1rem;
 }
 
 .nav {
@@ -200,12 +222,6 @@ OPTION {
     height: var(--iconSize);
     @include flexCenter();
     padding: 0.5rem;
-    SVG {
-        width: 100%;
-        height: 100%;
-        @include flexCenter();
-        fill: var(--tc);
-    }
 }
 .window {
     flex-direction: column;
@@ -242,12 +258,14 @@ OPTION {
     }
 }
 .card {
+    @include flex(column, center, center);
     border-radius: var(--br);
     overflow: hidden;
     background: var(--bg_t);
     width: 100%;
     max-width: 30rem;
     padding: 1rem 2rem;
+    gap: 1rem;
     H2,
     p {
         text-align: center;
@@ -323,10 +341,15 @@ OPTION {
     border-radius: var(--br);
 }
 .btns_container {
+    @include flex(row, space-between, center);
+    gap: 0.5rem;
+}
+.submenu_btns_container {
     @include flex(row, space-evenly, center);
+
+    width: 100%;
     border-top: solid 2px var(--color_base);
     border-bottom: solid 2px var(--color_base);
-    width: 100%;
     BUTTON {
         padding: 1rem 0;
         width: 100%;
@@ -356,9 +379,8 @@ DIALOG {
     border-radius: var(--br);
     background: var(--bg_t);
     padding: 0.5rem 1rem;
-    width: 95%;
-    max-width: 600px;
 }
+
 dialog::backdrop {
     background-color: var(--bg_t);
     width: 100%;
@@ -466,4 +488,7 @@ SPAN {
     border: var(--btnBorder);
     background: var(--btnBG);
     color: var(--btnText);
+}
+td {
+    padding: 0.5rem 1rem;
 }
