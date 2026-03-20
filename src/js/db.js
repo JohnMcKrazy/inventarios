@@ -5202,9 +5202,6 @@ export const db = {
                         },
                     ],
                 },
-<<<<<<< HEAD
-
-=======
                 {
                     name: "Ford Mustang Shelby 1:6",
                     cover: "",
@@ -5435,7 +5432,6 @@ export const db = {
                         },
                     ],
                 },
->>>>>>> e403005c8105fa744e6ac0d443152acfff6357e6
                 {
                     name: "Star Wars Millennium Falcon",
                     cover: "",
@@ -7514,9 +7510,6 @@ export const db = {
                         },
                     ],
                 },
-<<<<<<< HEAD
-
-=======
                 {
                     name: "Ford Mustang Shelby GT-500",
                     cover: "",
@@ -7593,7 +7586,6 @@ export const db = {
                         },
                     ],
                 },
->>>>>>> e403005c8105fa744e6ac0d443152acfff6357e6
                 {
                     name: "Maqueta Star Wars R2 D2",
                     cover: "",

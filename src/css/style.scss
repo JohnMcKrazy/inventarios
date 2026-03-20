@@ -185,17 +185,19 @@ OPTION {
     width: var(--iconSize + 1rem);
     height: var(--iconSize + 1rem);
 }
-
-.nav {
+.navs_container {
     position: fixed;
     top: 0;
-    width: fit-content;
-    padding: 1rem 2rem;
-    z-index: 5;
-    width: 100%;
-    left: 0;
     right: 0;
+    left: 0;
+}
+.nav {
+    width: 100%;
+
     background: var(--bg_t);
+}
+.nav_menu {
+    padding: 1rem 2rem;
     @include flex(row, space-between, center);
     BUTTON:not([search-btn]) {
         background: var(--bg_t);
@@ -394,7 +396,7 @@ MAIN {
 }
 SECTION {
     .section_content {
-        --navHeight: 6rem;
+        --navHeight: 10rem;
         margin-top: var(--navHeight);
     }
 }

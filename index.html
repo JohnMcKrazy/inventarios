@@ -21,63 +21,72 @@
         <link rel="stylesheet" href="./src/css/style.css" />
     </head>
     <body color-scheme="dark">
-        <nav class="nav nav_menu" nav="menu">
-            <div class="btns_container">
+        <div class="navs_container">
+            <nav class="nav nav_menu" nav="menu">
+                <div class="btns_container">
+                    <div class="menu_control">
+                        <button type="button" class="contrast icon_container" action-menu="actions" btn-active="false">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" icon="menu">
+                                <path d="M3 4H21V6H3V4ZM3 11H21V13H3V11ZM3 18H21V20H3V18Z"></path>
+                            </svg>
+                        </button>
+                        <div class="menu_container" menu-container="actions" show="false" visible="false" menu="actions">
+                            <button type="button" class="icon_container" theme-btn>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" show="true" theme-icon="dark">
+                                    <path
+                                        d="M12 18C8.68629 18 6 15.3137 6 12C6 8.68629 8.68629 6 12 6C15.3137 6 18 8.68629 18 12C18 15.3137 15.3137 18 12 18ZM11 1H13V4H11V1ZM11 20H13V23H11V20ZM3.51472 4.92893L4.92893 3.51472L7.05025 5.63604L5.63604 7.05025L3.51472 4.92893ZM16.9497 18.364L18.364 16.9497L20.4853 19.0711L19.0711 20.4853L16.9497 18.364ZM19.0711 3.51472L20.4853 4.92893L18.364 7.05025L16.9497 5.63604L19.0711 3.51472ZM5.63604 16.9497L7.05025 18.364L4.92893 20.4853L3.51472 19.0711L5.63604 16.9497ZM23 11V13H20V11H23ZM4 11V13H1V11H4Z"
+                                    ></path>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" show="false" theme-icon="light">
+                                    <path d="M11.3807 2.01886C9.91573 3.38768 9 5.3369 9 7.49999C9 11.6421 12.3579 15 16.5 15C18.6631 15 20.6123 14.0843 21.9811 12.6193C21.6613 17.8537 17.3149 22 12 22C6.47715 22 2 17.5228 2 12C2 6.68514 6.14629 2.33869 11.3807 2.01886Z"></path>
+                                </svg>
+                            </button>
+                            <button type="button" class="icon_container" menu-btn="add" btn-active="false">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M4 3H20C20.5523 3 21 3.44772 21 4V20C21 20.5523 20.5523 21 20 21H4C3.44772 21 3 20.5523 3 20V4C3 3.44772 3.44772 3 4 3ZM5 5V19H19V5H5ZM11 11V7H13V11H17V13H13V17H11V13H7V11H11Z"></path>
+                                </svg>
+                            </button>
+                            <button type="button" class="icon_container" share-qr-btn btn-active="false">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path
+                                        d="M13.5759 17.2714L8.46576 14.484C7.83312 15.112 6.96187 15.5 6 15.5C4.067 15.5 2.5 13.933 2.5 12C2.5 10.067 4.067 8.5 6 8.5C6.96181 8.5 7.83301 8.88796 8.46564 9.51593L13.5759 6.72855C13.5262 6.49354 13.5 6.24983 13.5 6C13.5 4.067 15.067 2.5 17 2.5C18.933 2.5 20.5 4.067 20.5 6C20.5 7.933 18.933 9.5 17 9.5C16.0381 9.5 15.1669 9.11201 14.5343 8.48399L9.42404 11.2713C9.47382 11.5064 9.5 11.7501 9.5 12C9.5 12.2498 9.47383 12.4935 9.42408 12.7285L14.5343 15.516C15.167 14.888 16.0382 14.5 17 14.5C18.933 14.5 20.5 16.067 20.5 18C20.5 19.933 18.933 21.5 17 21.5C15.067 21.5 13.5 19.933 13.5 18C13.5 17.7502 13.5262 17.5064 13.5759 17.2714Z"
+                                    ></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <button class="icon_container return_btn" type="button" return-action>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 13V20L4 12L12 4V11H20V13H12Z"></path></svg>
+                    </button>
+                </div>
                 <div class="menu_control">
-                    <button type="button" class="contrast icon_container" action-menu="actions" btn-active="false">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" icon="menu">
-                            <path d="M3 4H21V6H3V4ZM3 11H21V13H3V11ZM3 18H21V20H3V18Z"></path>
+                    <form form-ref="search" class="form" is="search_form">
+                        <div class="input_control">
+                            <input type="text" placeholder="Buscar" selector="search_input" id="search_input" />
+                            <button type="submit" class="icon_container" search-btn="search" btn-active="false" id="search_btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path
+                                        d="M18.031 16.6168L22.3137 20.8995L20.8995 22.3137L16.6168 18.031C15.0769 19.263 13.124 20 11 20C6.032 20 2 15.968 2 11C2 6.032 6.032 2 11 2C15.968 2 20 6.032 20 11C20 13.124 19.263 15.0769 18.031 16.6168ZM16.0247 15.8748C17.2475 14.6146 18 12.8956 18 11C18 7.1325 14.8675 4 11 4C7.1325 4 4 7.1325 4 11C4 14.8675 7.1325 18 11 18C12.8956 18 14.6146 17.2475 15.8748 16.0247L16.0247 15.8748Z"
+                                    ></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </form>
+                    <button type="button" class="contrast icon_container" menu-btn="scan" btn-active="false">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M21 16V21H3V16H5V19H19V16H21ZM3 11H21V13H3V11ZM21 8H19V5H5V8H3V3H21V8Z"></path>
                         </svg>
                     </button>
-                    <div class="menu_container" menu-container="actions" show="false" visible="false" menu="actions">
-                        <button type="button" class="icon_container" theme-btn>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" show="true" theme-icon="dark">
-                                <path
-                                    d="M12 18C8.68629 18 6 15.3137 6 12C6 8.68629 8.68629 6 12 6C15.3137 6 18 8.68629 18 12C18 15.3137 15.3137 18 12 18ZM11 1H13V4H11V1ZM11 20H13V23H11V20ZM3.51472 4.92893L4.92893 3.51472L7.05025 5.63604L5.63604 7.05025L3.51472 4.92893ZM16.9497 18.364L18.364 16.9497L20.4853 19.0711L19.0711 20.4853L16.9497 18.364ZM19.0711 3.51472L20.4853 4.92893L18.364 7.05025L16.9497 5.63604L19.0711 3.51472ZM5.63604 16.9497L7.05025 18.364L4.92893 20.4853L3.51472 19.0711L5.63604 16.9497ZM23 11V13H20V11H23ZM4 11V13H1V11H4Z"
-                                ></path>
-                            </svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" show="false" theme-icon="light">
-                                <path d="M11.3807 2.01886C9.91573 3.38768 9 5.3369 9 7.49999C9 11.6421 12.3579 15 16.5 15C18.6631 15 20.6123 14.0843 21.9811 12.6193C21.6613 17.8537 17.3149 22 12 22C6.47715 22 2 17.5228 2 12C2 6.68514 6.14629 2.33869 11.3807 2.01886Z"></path>
-                            </svg>
-                        </button>
-                        <button type="button" class="icon_container" menu-btn="add" btn-active="false">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                <path d="M4 3H20C20.5523 3 21 3.44772 21 4V20C21 20.5523 20.5523 21 20 21H4C3.44772 21 3 20.5523 3 20V4C3 3.44772 3.44772 3 4 3ZM5 5V19H19V5H5ZM11 11V7H13V11H17V13H13V17H11V13H7V11H11Z"></path>
-                            </svg>
-                        </button>
-                        <button type="button" class="icon_container" share-qr-btn btn-active="false">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                <path
-                                    d="M13.5759 17.2714L8.46576 14.484C7.83312 15.112 6.96187 15.5 6 15.5C4.067 15.5 2.5 13.933 2.5 12C2.5 10.067 4.067 8.5 6 8.5C6.96181 8.5 7.83301 8.88796 8.46564 9.51593L13.5759 6.72855C13.5262 6.49354 13.5 6.24983 13.5 6C13.5 4.067 15.067 2.5 17 2.5C18.933 2.5 20.5 4.067 20.5 6C20.5 7.933 18.933 9.5 17 9.5C16.0381 9.5 15.1669 9.11201 14.5343 8.48399L9.42404 11.2713C9.47382 11.5064 9.5 11.7501 9.5 12C9.5 12.2498 9.47383 12.4935 9.42408 12.7285L14.5343 15.516C15.167 14.888 16.0382 14.5 17 14.5C18.933 14.5 20.5 16.067 20.5 18C20.5 19.933 18.933 21.5 17 21.5C15.067 21.5 13.5 19.933 13.5 18C13.5 17.7502 13.5262 17.5064 13.5759 17.2714Z"
-                                ></path>
-                            </svg>
-                        </button>
-                    </div>
                 </div>
-                <button class="icon_container return_btn" type="button" return-action>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 13V20L4 12L12 4V11H20V13H12Z"></path></svg>
-                </button>
-            </div>
-            <div class="menu_control">
-                <form form-ref="search" class="form" is="search_form">
-                    <div class="input_control">
-                        <input type="text" placeholder="Buscar" selector="search_input" id="search_input" />
-                        <button type="submit" class="icon_container" search-btn="search" btn-active="false" id="search_btn">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                <path
-                                    d="M18.031 16.6168L22.3137 20.8995L20.8995 22.3137L16.6168 18.031C15.0769 19.263 13.124 20 11 20C6.032 20 2 15.968 2 11C2 6.032 6.032 2 11 2C15.968 2 20 6.032 20 11C20 13.124 19.263 15.0769 18.031 16.6168ZM16.0247 15.8748C17.2475 14.6146 18 12.8956 18 11C18 7.1325 14.8675 4 11 4C7.1325 4 4 7.1325 4 11C4 14.8675 7.1325 18 11 18C12.8956 18 14.6146 17.2475 15.8748 16.0247L16.0247 15.8748Z"
-                                ></path>
-                            </svg>
-                        </button>
-                    </div>
-                </form>
-                <button type="button" class="contrast icon_container" menu-btn="scan" btn-active="false">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <path d="M21 16V21H3V16H5V19H19V16H21ZM3 11H21V13H3V11ZM21 8H19V5H5V8H3V3H21V8Z"></path>
-                    </svg>
-                </button>
-            </div>
-        </nav>
+            </nav>
+            <nav class="nav nav_search" nav="submenu">
+                <div class="btns_container submenu_btns_container">
+                    <button type="button" btn-active="false" submenu-btn="results_editorials">Editoriales<span count="editorials">0</span></button>
+                    <button type="button" btn-active="true" submenu-btn="results_items">Items<span count="items">0</span></button>
+                    <button type="button" btn-active="false" submenu-btn="results_editions">Ediciones<span count="editions">0</span></button>
+                </div>
+            </nav>
+        </div>
         <dialog close-modal-window accent="good" modal="alert">
             <div class="content">
                 <h1 dialog-ref="title">Error</h1>
@@ -1208,11 +1217,6 @@
             </section>
             <section class="window" selector="window_search" window="search" show="true" visible="true">
                 <div class="section_content">
-                    <div class="btns_container submenu_btns_container">
-                        <button type="button" btn-active="false" submenu-btn="results_editorials">Editoriales<span count="editorials">0</span></button>
-                        <button type="button" btn-active="true" submenu-btn="results_items">Items<span count="items">0</span></button>
-                        <button type="button" btn-active="false" submenu-btn="results_editions">Ediciones<span count="editions">0</span></button>
-                    </div>
                     <ul class="content cards_container" cards-container="results_editions" show="false" visible="false" subwindow="results_editions">
                         <h1>Prueba de ediciones</h1>
                     </ul>

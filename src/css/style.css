@@ -205,27 +205,30 @@ OPTION:hover {
   height: var(--iconSize1rem);
 }
 
-.nav {
+.navs_container {
   position: fixed;
   top: 0;
-  width: -moz-fit-content;
-  width: fit-content;
-  padding: 1rem 2rem;
-  z-index: 5;
-  width: 100%;
-  left: 0;
   right: 0;
+  left: 0;
+}
+
+.nav {
+  width: 100%;
   background: var(--bg_t);
+}
+
+.nav_menu {
+  padding: 1rem 2rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
-.nav BUTTON:not([search-btn]) {
+.nav_menu BUTTON:not([search-btn]) {
   background: var(--bg_t);
   border-radius: var(--br);
 }
-.nav .menu_control {
+.nav_menu .menu_control {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -482,7 +485,7 @@ MAIN {
 }
 
 SECTION .section_content {
-  --navHeight: 6rem;
+  --navHeight: 10rem;
   margin-top: var(--navHeight);
 }
 
