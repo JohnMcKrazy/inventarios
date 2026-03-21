@@ -15,25 +15,28 @@ slides.forEach((slide) => {
     const columnas = slide.querySelectorAll("td");
     console.log(slide);
     // 1. Obtiene el número de edición
+    const editionSpan = columnas[0].querySelector("span");
 
-    const edition = columnas[0].querySelector("span").textContent;
-    console.log(typeof parseInt(edition));
-    if (typeof parseInt(edition) === "number" && edition <= 80) {
-        const title = columnas[1].querySelector("a");
+    if (editionSpan) {
+        const edition = editionSpan.textContent;
+        console.log(typeof parseInt(edition));
+        if (typeof parseInt(edition) === "number" && edition <= 80) {
+            const title = columnas[1].querySelector("a");
 
-        if (title) {
-            console.log(edition, title.textContent);
+            if (title) {
+                console.log(edition, title.textContent.trim());
 
-            const imageLink = xtractImage(edition - 1);
-            console.log(imageLink);
+                const imageLink = xtractImage(edition - 1);
+                console.log(imageLink);
 
-            collectionData.push({
-                description: title.textContent,
-                image: imageLink,
-                edition: edition,
-                code: "",
-                id: "",
-            });
+                collectionData.push({
+                    description: title.textContent.trim(),
+                    image: imageLink,
+                    edition: edition,
+                    code: "",
+                    id: "",
+                });
+            }
         }
     }
 });
