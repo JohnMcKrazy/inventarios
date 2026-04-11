@@ -87,12 +87,15 @@ A:active {
     color: inherit;
 }
 H1 {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-weight: 600;
 }
 h2 {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-weight: 600;
+}
+[selector="editorial_name"] {
+    font-size: 0.8rem;
 }
 UL {
     list-style: none;
@@ -106,7 +109,7 @@ BUTTON {
     background: none;
     border: none;
     cursor: pointer;
-
+    font-size: 1rem;
     @include flexCenter();
     fill: var(--tc);
     &:disabled {
@@ -190,6 +193,7 @@ OPTION {
     top: 0;
     right: 0;
     left: 0;
+    z-index: 100;
 }
 .nav {
     width: 100%;
